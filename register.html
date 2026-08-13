@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<link rel="icon" type="image/x-icon" href="https://lh3.googleusercontent.com/aida-public/AB6AXuCBupMauTgDPO5epvaCzUOWQwJmwJcoUYV_MF0th3hFZeS9u2H98O4GYiZPGYWt8sw4E4ZU5l2vFQ1VsnY3KBIk4gccgGOCjBiAMhCMbWUzbMglEmPVvgsKvokkeHIC0EmAZfPNi7KQJ9NN2fC8EL6F8kj3bbl_EHHSQFapz5wjEFD_w_fTfxor7QmyeT7IvE61IS3ugy6UybNjebo2e8YNQI_PD7KQlz_anTrXCXJ-Nnp9EzilpU3Ypg" />
+
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Register - ChefRent Pro</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&amp;family=Inter:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-tertiary-fixed": "#0d1d29",
+                      "on-primary-fixed-variant": "#394857",
+                      "on-background": "#111d27",
+                      "surface-dim": "#d0dbea",
+                      "on-surface-variant": "#44474c",
+                      "primary": "#061624",
+                      "on-secondary": "#ffffff",
+                      "error": "#ba1a1a",
+                      "inverse-on-surface": "#e8f2ff",
+                      "inverse-surface": "#26313d",
+                      "on-primary-fixed": "#0d1d2a",
+                      "surface-container-low": "#edf4ff",
+                      "on-tertiary": "#ffffff",
+                      "primary-container": "#1c2b39",
+                      "on-secondary-container": "#571a00",
+                      "inverse-primary": "#b8c8da",
+                      "error-container": "#ffdad6",
+                      "tertiary-fixed": "#d4e4f5",
+                      "secondary-fixed-dim": "#ffb599",
+                      "on-tertiary-container": "#8392a2",
+                      "on-tertiary-fixed-variant": "#394856",
+                      "tertiary-container": "#1c2b38",
+                      "tertiary": "#061722",
+                      "surface-container-high": "#dee9f8",
+                      "on-error-container": "#93000a",
+                      "on-secondary-fixed": "#370e00",
+                      "surface-tint": "#516070",
+                      "surface-container": "#e3effe",
+                      "outline": "#74777c",
+                      "surface": "#f7f9ff",
+                      "secondary-container": "#fd661f",
+                      "secondary-fixed": "#ffdbce",
+                      "surface-container-highest": "#d8e4f3",
+                      "on-primary": "#ffffff",
+                      "surface-container-lowest": "#ffffff",
+                      "tertiary-fixed-dim": "#b8c8d9",
+                      "outline-variant": "#c4c6cc",
+                      "surface-bright": "#f7f9ff",
+                      "secondary": "#a73a00",
+                      "surface-variant": "#d8e4f3",
+                      "primary-fixed-dim": "#b8c8da",
+                      "on-secondary-fixed-variant": "#7f2a00",
+                      "background": "#f7f9ff",
+                      "on-primary-container": "#8392a4",
+                      "primary-fixed": "#d4e4f7",
+                      "on-surface": "#111d27",
+                      "on-error": "#ffffff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "container-max-width": "1280px",
+                      "stack-lg": "32px",
+                      "stack-sm": "8px",
+                      "section-padding-horizontal": "24px",
+                      "gutter": "24px",
+                      "section-padding-vertical": "100px",
+                      "stack-md": "16px"
+              },
+              "fontFamily": {
+                      "headline-md": [
+                              "Barlow Condensed"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "display-lg": [
+                              "Barlow Condensed"
+                      ],
+                      "headline-sm": [
+                              "Barlow Condensed"
+                      ],
+                      "label-bold": [
+                              "Inter"
+                      ],
+                      "display-lg-mobile": [
+                              "Barlow Condensed"
+                      ],
+                      "body-sm": [
+                              "Inter"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-sm": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-bold": [
+                              "12px",
+                              {
+                                      "lineHeight": "1",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "display-lg-mobile": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-sm": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+<script>
+    function toggleTheme() {
+        document.documentElement.classList.toggle('dark');
+        const isDark = document.documentElement.classList.contains('dark');
+        const icon = document.getElementById('theme-icon');
+        if (icon) {
+            icon.textContent = isDark ? 'light_mode' : 'dark_mode';
+        }
+    }
+
+        // RTL Toggle Logic
+        const rtlToggle = document.getElementById('rtl-toggle');
+        if (rtlToggle) {
+            rtlToggle.addEventListener('click', () => {
+                const html = document.documentElement;
+                if (html.getAttribute('dir') === 'rtl') {
+                    html.setAttribute('dir', 'ltr');
+                } else {
+                    html.setAttribute('dir', 'rtl');
+                }
+            });
+        }
+</script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(168, 184, 200, 0.3);
+        }
+        .dark .glass-card {
+            background: rgba(28, 43, 57, 0.85);
+            border: 1px solid rgba(168, 184, 200, 0.1);
+        }
+        .fade-in {
+            animation: fadeIn 0.6s ease-out forwards;
+            opacity: 0;
+            transform: translateY(10px);
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Industrial Pattern Overlay */
+        .bg-industrial {
+            position: relative;
+        }
+        .bg-industrial::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: radial-gradient(#a8b8c8 1px, transparent 1px);
+            background-size: 24px 24px;
+            opacity: 0.1;
+            z-index: 0;
+            pointer-events: none;
+        }
+        .dark .bg-industrial::before {
+            background-image: radial-gradient(#394857 1px, transparent 1px);
+        }
+    </style>
+
+<script>
+    if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+        document.documentElement.classList.remove('light');
+    } else {
+        document.documentElement.classList.add('light');
+        document.documentElement.classList.remove('dark');
+    }
+</script>
+</head>
+<body class="bg-background dark:bg-surface-inverse text-on-surface dark:text-inverse-on-surface font-body-md antialiased min-h-screen flex flex-col relative bg-industrial">
+<!-- TopNavBar with Theme Toggle -->
+<header class="w-full px-section-padding-horizontal py-4 flex justify-between items-center bg-surface/90 dark:bg-primary-container/90 backdrop-blur shadow-sm relative z-20">
+<div class="font-headline-sm text-headline-sm text-primary dark:text-inverse-primary tracking-tight">ChefRent Pro</div>
+<button aria-label="Toggle dark mode" class="p-2 rounded-full hover:bg-surface-variant dark:hover:bg-surface-container-high transition-colors flex items-center justify-center text-primary dark:text-inverse-primary" onclick="toggleTheme()" type="button">
+<span class="material-symbols-outlined text-[24px]" id="theme-icon">dark_mode</span>
+</button>
+</header>
+<!-- Main Registration Section -->
+<main class="flex-grow flex items-center justify-center py-section-padding-vertical px-section-padding-horizontal relative z-10">
+<!-- Background Image Container -->
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center opacity-30 dark:opacity-10" data-alt="A blurred background image showing a pristine, professional industrial kitchen. The scene features gleaming brushed steel surfaces, heavy-duty catering machinery, and subtle high-visibility safety indicators. The lighting is crisp and technical, casting soft reflections on the metallic textures, creating a mood of absolute technical authority and rigorous sanitation typical of high-stakes equipment logistics." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCAVp_3maNdDu70jOBoXMnkDZ2f0srC8v6JvMJhvweeOpXUtLTQg_WENFPOaVg76CRgg6waZ7VvF8wqwhg08IxMfeF0H8Fk92OpoB3XZl3efJ5BncQXdAxOk5DFQwHyxFEPe9YotS2V9zCI-kTknSW8ggs94FI4MLi07lt31xfjphOvL-MuHT-lFo2nCv7jHOXMrmZQah0wFRcM0MuWcEbY16OBbwc2UiTgqPtPHztYaUuHyyz1YDdVwg')"></div>
+<div class="absolute inset-0 bg-gradient-to-b from-background/80 to-background dark:from-primary/90 dark:to-primary"></div>
+</div>
+<div class="glass-card fade-in rounded w-full max-w-2xl p-8 md:p-12 relative z-10 shadow-sm flex flex-col gap-stack-lg dark:shadow-none">
+<div class="text-center flex flex-col gap-stack-sm">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary dark:text-inverse-primary tracking-tight">Create Account</h1>
+<p class="font-body-md text-body-md text-on-surface-variant dark:text-on-primary-container">Join ChefRent Pro for professional equipment logistics.</p>
+</div>
+<form class="flex flex-col gap-stack-md w-full">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-stack-md">
+<!-- Full Name -->
+<div class="flex flex-col gap-1">
+<label class="font-label-bold text-label-bold text-on-surface dark:text-inverse-on-surface" for="fullName">Full Name</label>
+<input class="w-full bg-surface-lowest dark:bg-tertiary-container border border-outline-variant/30 dark:border-outline/50 rounded focus:border-primary-container dark:focus:border-inverse-primary focus:ring-1 focus:ring-primary-container dark:focus:ring-inverse-primary px-4 py-3 font-body-md text-body-md dark:text-inverse-on-surface transition-colors placeholder:text-outline" id="fullName" placeholder="Enter your full name" type="text"/>
+</div>
+<!-- Business Name -->
+<div class="flex flex-col gap-1">
+<label class="font-label-bold text-label-bold text-on-surface dark:text-inverse-on-surface" for="businessName">Business/Company Name (Optional)</label>
+<input class="w-full bg-surface-lowest dark:bg-tertiary-container border border-outline-variant/30 dark:border-outline/50 rounded focus:border-primary-container dark:focus:border-inverse-primary focus:ring-1 focus:ring-primary-container dark:focus:ring-inverse-primary px-4 py-3 font-body-md text-body-md dark:text-inverse-on-surface transition-colors placeholder:text-outline" id="businessName" placeholder="e.g. Acme Catering" type="text"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-stack-md">
+<!-- Email -->
+<div class="flex flex-col gap-1">
+<label class="font-label-bold text-label-bold text-on-surface dark:text-inverse-on-surface" for="email">Email Address</label>
+<input class="w-full bg-surface-lowest dark:bg-tertiary-container border border-outline-variant/30 dark:border-outline/50 rounded focus:border-primary-container dark:focus:border-inverse-primary focus:ring-1 focus:ring-primary-container dark:focus:ring-inverse-primary px-4 py-3 font-body-md text-body-md dark:text-inverse-on-surface transition-colors placeholder:text-outline" id="email" placeholder="Enter your email" type="email"/>
+</div>
+<!-- Phone -->
+<div class="flex flex-col gap-1">
+<label class="font-label-bold text-label-bold text-on-surface dark:text-inverse-on-surface" for="phone">Phone Number</label>
+<input class="w-full bg-surface-lowest dark:bg-tertiary-container border border-outline-variant/30 dark:border-outline/50 rounded focus:border-primary-container dark:focus:border-inverse-primary focus:ring-1 focus:ring-primary-container dark:focus:ring-inverse-primary px-4 py-3 font-body-md text-body-md dark:text-inverse-on-surface transition-colors placeholder:text-outline" id="phone" placeholder="Enter phone number" type="tel"/>
+</div>
+</div>
+<!-- City -->
+<div class="flex flex-col gap-1">
+<label class="font-label-bold text-label-bold text-on-surface dark:text-inverse-on-surface" for="city">City</label>
+<input class="w-full bg-surface-lowest dark:bg-tertiary-container border border-outline-variant/30 dark:border-outline/50 rounded focus:border-primary-container dark:focus:border-inverse-primary focus:ring-1 focus:ring-primary-container dark:focus:ring-inverse-primary px-4 py-3 font-body-md text-body-md dark:text-inverse-on-surface transition-colors placeholder:text-outline" id="city" placeholder="Enter your operating city" type="text"/>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-stack-md">
+<!-- Password -->
+<div class="flex flex-col gap-1 relative">
+<label class="font-label-bold text-label-bold text-on-surface dark:text-inverse-on-surface" for="password">Password</label>
+<div class="relative">
+<input class="w-full bg-surface-lowest dark:bg-tertiary-container border border-outline-variant/30 dark:border-outline/50 rounded focus:border-primary-container dark:focus:border-inverse-primary focus:ring-1 focus:ring-primary-container dark:focus:ring-inverse-primary px-4 py-3 font-body-md text-body-md dark:text-inverse-on-surface transition-colors placeholder:text-outline pr-10" id="password" placeholder="Create a password" type="password"/>
+<button class="absolute inset-y-0 right-0 flex items-center pr-3 text-on-surface-variant dark:text-on-primary-container hover:text-primary dark:hover:text-inverse-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">visibility_off</span>
+</button>
+</div>
+</div>
+<!-- Confirm Password -->
+<div class="flex flex-col gap-1 relative">
+<label class="font-label-bold text-label-bold text-on-surface dark:text-inverse-on-surface" for="confirmPassword">Confirm Password</label>
+<div class="relative">
+<input class="w-full bg-surface-lowest dark:bg-tertiary-container border border-outline-variant/30 dark:border-outline/50 rounded focus:border-primary-container dark:focus:border-inverse-primary focus:ring-1 focus:ring-primary-container dark:focus:ring-inverse-primary px-4 py-3 font-body-md text-body-md dark:text-inverse-on-surface transition-colors placeholder:text-outline pr-10" id="confirmPassword" placeholder="Confirm your password" type="password"/>
+<button class="absolute inset-y-0 right-0 flex items-center pr-3 text-on-surface-variant dark:text-on-primary-container hover:text-primary dark:hover:text-inverse-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">visibility_off</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Create Account Button -->
+<button class="w-full bg-secondary-container dark:bg-secondary hover:bg-secondary dark:hover:bg-secondary-container text-on-secondary dark:text-on-secondary py-4 rounded font-label-bold text-label-bold transition-all duration-200 mt-stack-sm flex items-center justify-center gap-2 shadow-sm active:translate-y-[1px]" type="submit">
+                    Create Account
+                    <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+<div class="text-center mt-4">
+<a class="font-body-sm text-body-sm text-on-surface-variant dark:text-on-primary-container hover:text-secondary-container dark:hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="login.html">Already registered? Login</a>
+</div>
+</form>
+</div>
+</main>
+
+<!-- Footer is suppressed as this is a transactional page (Registration) -->
+
+    <script>
+        (function() {
+            const toggle = document.getElementById('theme-toggle');
+            
+            // Set initial icon based on current theme from localStorage/system
+            const html = document.documentElement;
+            const isDark = html.classList.contains('dark');
+            
+            if (toggle) {
+                const icon = toggle.querySelector('.material-symbols-outlined');
+                if (icon) {
+                    icon.textContent = isDark ? 'dark_mode' : 'light_mode';
+                    icon.setAttribute('data-icon', isDark ? 'dark_mode' : 'light_mode');
+                }
+                
+                toggle.addEventListener('click', () => {
+                    html.classList.toggle('dark');
+                    html.classList.toggle('light');
+                    const isDarkNow = html.classList.contains('dark');
+                    localStorage.setItem('theme', isDarkNow ? 'dark' : 'light');
+                    
+                    if (icon) {
+                        icon.textContent = isDarkNow ? 'dark_mode' : 'light_mode';
+                        icon.setAttribute('data-icon', isDarkNow ? 'dark_mode' : 'light_mode');
+                    }
+                });
+            }
+        })();
+    </script>
+</body></html>

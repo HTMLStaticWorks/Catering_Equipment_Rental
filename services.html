@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+
+<html class="" lang="en"><head>
+<meta charset="utf-8"/>
+<link rel="icon" type="image/x-icon" href="https://lh3.googleusercontent.com/aida-public/AB6AXuCBupMauTgDPO5epvaCzUOWQwJmwJcoUYV_MF0th3hFZeS9u2H98O4GYiZPGYWt8sw4E4ZU5l2vFQ1VsnY3KBIk4gccgGOCjBiAMhCMbWUzbMglEmPVvgsKvokkeHIC0EmAZfPNi7KQJ9NN2fC8EL6F8kj3bbl_EHHSQFapz5wjEFD_w_fTfxor7QmyeT7IvE61IS3ugy6UybNjebo2e8YNQI_PD7KQlz_anTrXCXJ-Nnp9EzilpU3Ypg" />
+
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Services - ChefRent Pro</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&amp;family=Inter:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline": "#74777c",
+                        "surface-container-high": "#dee9f8",
+                        "on-primary-fixed-variant": "#394857",
+                        "on-secondary-fixed-variant": "#7f2a00",
+                        "surface-container-highest": "#d8e4f3",
+                        "background": "#f7f9ff",
+                        "error-container": "#ffdad6",
+                        "surface-container": "#e3effe",
+                        "primary": "#061624",
+                        "on-surface-variant": "#44474c",
+                        "outline-variant": "#c4c6cc",
+                        "error": "#ba1a1a",
+                        "tertiary": "#061722",
+                        "tertiary-fixed": "#d4e4f5",
+                        "surface-container-low": "#edf4ff",
+                        "surface": "#f7f9ff",
+                        "inverse-surface": "#26313d",
+                        "surface-tint": "#516070",
+                        "surface-dim": "#d0dbea",
+                        "secondary-fixed": "#ffdbce",
+                        "on-secondary": "#ffffff",
+                        "inverse-on-surface": "#e8f2ff",
+                        "on-secondary-container": "#571a00",
+                        "on-tertiary-container": "#8392a2",
+                        "primary-container": "#1c2b39",
+                        "primary-fixed-dim": "#b8c8da",
+                        "inverse-primary": "#b8c8da",
+                        "surface-variant": "#d8e4f3",
+                        "on-error": "#ffffff",
+                        "secondary-fixed-dim": "#ffb599",
+                        "on-background": "#111d27",
+                        "surface-bright": "#f7f9ff",
+                        "on-primary": "#ffffff",
+                        "on-primary-container": "#8392a4",
+                        "on-secondary-fixed": "#370e00",
+                        "tertiary-container": "#1c2b38",
+                        "on-surface": "#111d27",
+                        "on-error-container": "#93000a",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed-dim": "#b8c8d9",
+                        "on-tertiary-fixed": "#0d1d29",
+                        "on-tertiary-fixed-variant": "#394856",
+                        "secondary-container": "#fd661f",
+                        "on-primary-fixed": "#0d1d2a",
+                        "secondary": "#a73a00",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed": "#d4e4f7"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "stack-md": "16px",
+                        "section-padding-vertical": "100px",
+                        "gutter": "24px",
+                        "stack-sm": "8px",
+                        "stack-lg": "32px",
+                        "container-max-width": "1280px",
+                        "section-padding-horizontal": "24px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "label-bold": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-md": ["Barlow Condensed"],
+                        "display-lg": ["Barlow Condensed"],
+                        "headline-sm": ["Barlow Condensed"],
+                        "display-lg-mobile": ["Barlow Condensed"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label-bold": ["12px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "700" }],
+                        "body-sm": ["14px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "headline-md": ["32px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-sm": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "display-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: #F5F7F9; transition: background-color 0.3s ease; } /* Base Layer */
+        .dark body { background-color: #061722; }
+        .industrial-card {
+            background-color: #FFFFFF;
+            border: 1px solid rgba(168, 184, 200, 0.3); /* Stainless Silver */
+            border-radius: 0.375rem; /* 6px */
+            transition: all 0.2s ease;
+        }
+        .dark .industrial-card {
+            background-color: #111d27;
+            border: 1px solid rgba(116, 119, 124, 0.3);
+        }
+        .industrial-card:hover {
+            box-shadow: 0 4px 0 0 rgba(168, 184, 200, 0.5); /* Physical lift */
+            transform: translateY(-2px);
+        }
+        .dark .industrial-card:hover {
+            box-shadow: 0 4px 0 0 rgba(116, 119, 124, 0.5);
+        }
+        .industrial-divider {
+            border-color: rgba(168, 184, 200, 1);
+        }
+        .text-flame-orange { color: #E8570C; }
+        .bg-flame-orange { background-color: #E8570C; }
+        .text-steel-charcoal { color: #1C2B39; }
+        .dark .text-steel-charcoal { color: #b8c8da; }
+        .bg-steel-charcoal { background-color: #1C2B39; }
+        .dark .bg-steel-charcoal { background-color: #b8c8da; }
+        .border-stainless-silver { border-color: #A8B8C8; }
+        .dark .border-stainless-silver { border-color: #44474c; }
+
+        /* Custom Animations */
+        @keyframes shimmer {
+            0% { filter: brightness(1) saturate(1); }
+            50% { filter: brightness(1.2) saturate(1.1); }
+            100% { filter: brightness(1) saturate(1); }
+        }
+        .animate-shimmer {
+            animation: shimmer 4s infinite ease-in-out;
+        }
+
+        @keyframes drift {
+            0% { transform: scale(1.05) translateX(-1%); }
+            50% { transform: scale(1.05) translateX(1%); }
+            100% { transform: scale(1.05) translateX(-1%); }
+        }
+        .animate-drift {
+            animation: drift 15s infinite ease-in-out;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in-up {
+            opacity: 0;
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+    </style>
+
+<script>
+    if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+        document.documentElement.classList.remove('light');
+    } else {
+        document.documentElement.classList.add('light');
+        document.documentElement.classList.remove('dark');
+    }
+</script>
+</head>
+<body class="bg-background text-on-background dark:bg-tertiary dark:text-on-tertiary font-body-md antialiased pt-[70px]">
+<!-- TopNavBar -->
+<nav class="bg-surface dark:bg-inverse-surface fixed top-0 w-full h-[70px] z-50 border-b border-outline-variant/30 dark:border-outline/30 shadow-sm hidden xl:flex">
+<div class="flex justify-between items-center h-full px-section-padding-horizontal max-w-container-max-width mx-auto w-full">
+<div class="font-display-lg text-display-lg-mobile font-bold text-primary dark:text-primary-fixed">ChefRent Pro</div>
+<ul class="flex space-x-2 items-center h-full">
+<li class="h-full flex items-center"><a class="text-on-surface-variant dark:text-on-tertiary-container hover:text-secondary font-label-bold text-label-bold h-full flex items-center hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-colors duration-200 px-2" href="home.html">Home</a></li>
+<li class="h-full flex items-center"><a class="text-on-surface-variant dark:text-on-tertiary-container hover:text-secondary font-label-bold text-label-bold h-full flex items-center hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-colors duration-200 px-2" href="home2.html">Home 2</a></li>
+<li class="h-full flex items-center"><a class="text-on-surface-variant dark:text-on-tertiary-container hover:text-secondary font-label-bold text-label-bold h-full flex items-center hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-colors duration-200 px-2" href="catalog.html">Catalog</a></li>
+<li class="h-full flex items-center"><a class="text-secondary dark:text-secondary-fixed-dim font-bold border-b-2 border-secondary font-label-bold text-label-bold h-full flex items-center hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-colors duration-200 px-2" href="services.html">Services</a></li>
+<li class="h-full flex items-center"><a class="text-on-surface-variant dark:text-on-tertiary-container hover:text-secondary font-label-bold text-label-bold h-full flex items-center hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-colors duration-200 px-2" href="gallery.html">Gallery</a></li>
+<li class="h-full flex items-center"><a class="text-on-surface-variant dark:text-on-tertiary-container hover:text-secondary font-label-bold text-label-bold h-full flex items-center hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-colors duration-200 px-2" href="blog.html">Blog</a></li>
+<li class="h-full flex items-center"><a class="text-on-surface-variant dark:text-on-tertiary-container hover:text-secondary font-label-bold text-label-bold h-full flex items-center hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-colors duration-200 px-2" href="contact.html">Contact</a></li>
+</ul>
+<div class="flex items-center space-x-4">
+<button class="font-label-bold text-label-bold text-on-surface-variant dark:text-on-tertiary-container border border-outline-variant dark:border-outline/50 px-4 py-2 rounded-lg hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-colors" onclick="window.location.href='login.html'">Login</button>
+<button class="font-label-bold text-label-bold bg-secondary-container text-on-secondary-container px-6 py-2 rounded-lg hover:opacity-90 transition-opacity" onclick="window.location.href='contact.html'">Get a Quote</button>
+<button class="text-on-surface-variant dark:text-on-tertiary-container flex items-center justify-center p-2 rounded-full hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-colors" id="theme-toggle">
+<span class="material-symbols-outlined" data-icon="light_mode" style="font-variation-settings: 'FILL' 0;">light_mode</span>
+</button>
+<button aria-label="Toggle RTL" class="text-on-surface-variant dark:text-on-tertiary-container flex items-center justify-center p-2 rounded-full hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-colors" id="rtl-toggle">
+<span class="material-symbols-outlined" data-icon="format_textdirection_r_to_l" style="font-variation-settings: 'FILL' 0;">format_textdirection_r_to_l</span>
+</button>
+
+</div>
+</div>
+</nav>
+<!-- SideNavBar (Mobile) -->
+<div class="bg-surface dark:bg-inverse-surface fixed inset-y-0 right-0 w-64 z-[60] transform translate-x-full transition-transform duration-300 xl:hidden border-l border-outline-variant/30 shadow-xl flex flex-col h-full py-stack-lg" id="mobile-nav">
+<!-- Close button placeholder for interaction -->
+<button class="absolute top-4 right-4 p-2 text-on-surface dark:text-on-tertiary-container" onclick="document.getElementById('mobile-nav').classList.add('translate-x-full')">
+<span class="material-symbols-outlined" data-icon="close">close</span>
+</button>
+<div class="px-6 mb-8">
+<div class="font-display-lg-mobile text-display-lg-mobile text-primary dark:text-inverse-primary mb-1">ChefRent Pro</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant dark:text-on-tertiary-container">Professional Equipment Logistics</div>
+</div>
+<div class="flex-1 overflow-y-auto px-4">
+<a class="flex items-center text-on-surface-variant dark:text-on-tertiary-container hover:bg-surface-container-high rounded-lg mx-2 my-1 p-3 hover:bg-secondary/10 dark:hover:bg-secondary-fixed/10" href="home.html">
+<span class="material-symbols-outlined mr-4" data-icon="home">home</span>
+<span class="font-label-bold text-label-bold">Home</span>
+</a>
+            <a class="flex items-center text-on-surface-variant dark:text-on-tertiary-container hover:bg-surface-container-high rounded-lg mx-2 my-1 p-3 hover:bg-secondary/10 dark:hover:bg-secondary-fixed/10" href="home2.html">
+                <span class="material-symbols-outlined mr-4" data-icon="home_work">home_work</span>
+                <span class="font-label-bold text-label-bold">Home 2</span>
+            </a>
+<a class="flex items-center text-on-surface-variant dark:text-on-tertiary-container hover:bg-surface-container-high rounded-lg mx-2 my-1 p-3 hover:bg-secondary/10 dark:hover:bg-secondary-fixed/10" href="catalog.html">
+<span class="material-symbols-outlined mr-4" data-icon="grid_view">grid_view</span>
+<span class="font-label-bold text-label-bold">Catalog</span>
+</a>
+<a class="flex items-center bg-secondary-container text-on-secondary-container rounded-lg mx-2 my-1 p-3 scale-98 hover:bg-secondary/10 dark:hover:bg-secondary-fixed/10" href="services.html">
+<span class="material-symbols-outlined mr-4" data-icon="handyman">handyman</span>
+<span class="font-label-bold text-label-bold">Services</span>
+</a>
+<a class="flex items-center text-on-surface-variant dark:text-on-tertiary-container hover:bg-surface-container-high rounded-lg mx-2 my-1 p-3 hover:bg-secondary/10 dark:hover:bg-secondary-fixed/10" href="gallery.html">
+<span class="material-symbols-outlined mr-4" data-icon="photo_library">photo_library</span>
+<span class="font-label-bold text-label-bold">Gallery</span>
+</a>
+<a class="flex items-center text-on-surface-variant dark:text-on-tertiary-container hover:bg-surface-container-high rounded-lg mx-2 my-1 p-3 hover:bg-secondary/10 dark:hover:bg-secondary-fixed/10" href="blog.html">
+<span class="material-symbols-outlined mr-4" data-icon="article">article</span>
+<span class="font-label-bold text-label-bold">Blog</span>
+</a>
+<a class="flex items-center text-on-surface-variant dark:text-on-tertiary-container hover:bg-surface-container-high rounded-lg mx-2 my-1 p-3 hover:bg-secondary/10 dark:hover:bg-secondary-fixed/10" href="contact.html">
+<span class="material-symbols-outlined mr-4" data-icon="mail">mail</span>
+<span class="font-label-bold text-label-bold">Contact</span>
+</a>
+            <button class="flex items-center text-on-surface-variant dark:text-on-tertiary-container hover:bg-surface-container-high rounded-lg mx-2 my-1 p-3 hover:bg-secondary/10 dark:hover:bg-secondary-fixed/10 w-full text-left" onclick="document.getElementById('theme-toggle').click()">
+                <span class="material-symbols-outlined mr-4" data-icon="dark_mode">dark_mode</span>
+                <span class="font-label-bold text-label-bold">Toggle Theme</span>
+            </button>
+            <button class="flex items-center text-on-surface-variant dark:text-on-tertiary-container hover:bg-surface-container-high rounded-lg mx-2 my-1 p-3 hover:bg-secondary/10 dark:hover:bg-secondary-fixed/10 w-full text-left" onclick="document.getElementById('rtl-toggle').click()">
+                <span class="material-symbols-outlined mr-4" data-icon="swap_horiz">swap_horiz</span>
+                <span class="font-label-bold text-label-bold">Toggle RTL</span>
+            </button>
+</div>
+<div class="px-6 mt-auto space-y-4">
+<button class="w-full font-label-bold text-label-bold bg-secondary-container text-on-secondary-container px-6 py-3 rounded-lg hover:opacity-90 transition-opacity" onclick="window.location.href='contact.html'">Get a Quote</button>
+<div class="border-t border-outline-variant/30 pt-4 flex flex-col space-y-2">
+<a class="flex items-center text-on-surface-variant dark:text-on-tertiary-container p-2 hover:bg-surface-container-high dark:hover:bg-surface-container-highest rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined mr-3 text-lg" data-icon="login">login</span>
+<span class="font-label-bold text-label-bold">Login</span>
+</a>
+<a class="flex items-center text-on-surface-variant dark:text-on-tertiary-container p-2 hover:bg-surface-container-high dark:hover:bg-surface-container-highest rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined mr-3 text-lg" data-icon="settings">settings</span>
+<span class="font-label-bold text-label-bold">Settings</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Mobile header substitute to open side nav (only visible xl:hidden) -->
+<div class="xl:hidden fixed top-0 w-full h-[70px] bg-surface dark:bg-inverse-surface border-b border-outline-variant/30 z-40 flex items-center justify-between px-4">
+<div class="font-display-lg-mobile text-display-lg-mobile font-bold text-primary">ChefRent Pro</div>
+<button class="p-2 text-on-surface dark:text-on-tertiary-container" onclick="document.getElementById('mobile-nav').classList.remove('translate-x-full')">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+<main>
+<!-- Hero Section -->
+<header class="relative bg-primary text-white py-section-padding-vertical overflow-hidden">
+<div class="absolute inset-0 opacity-20 bg-[url('placeholder')] bg-cover bg-center" data-alt="A professional stainless steel commercial kitchen with industrial ovens and prep stations, dramatic high-contrast lighting highlighting the metallic textures, conveying a sense of efficiency and rigorous standards." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBmQSSUncSdrSksyg0axkYGdGAxKHlk2jPAokk48LnaJfkCuLFPWLopxdTKi-rHfCDaWQdWkGL6py136ldPWvgs4nYzJgbJrmVlGHS8I4E0OkMzvNqWknmLZ5yHqWNOVBw0vVR1WkwxVmho7FQWf_0BfPKbPe152TZC1rtWEunKzknlZUh09-GDN_NQ7qnLcT_QMNXueb1Znr5XRmdtzDxI1jAweIUQJAncMslHLUU_Wbev_ZjP7P1p9Q')"></div>
+<div class="relative max-w-container-max-width mx-auto px-section-padding-horizontal text-center">
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-stack-md uppercase tracking-wide">Professional Equipment Logistics</h1>
+<p class="font-body-lg text-body-lg text-surface-dim max-w-2xl mx-auto">End-to-end support for high-stakes catering operations. From precision delivery to rigorous sanitization, we ensure your equipment performs flawlessly.</p>
+</div>
+</header>
+<!-- Service Grid -->
+<section class="py-section-padding-vertical max-w-container-max-width mx-auto px-section-padding-horizontal transition-colors duration-300">
+<div class="text-center mb-stack-lg">
+<h2 class="font-headline-md text-headline-md text-primary dark:text-primary-fixed uppercase transition-colors duration-300">Our Core Services</h2>
+<div class="w-16 h-1 bg-flame-orange mx-auto mt-4"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Service 1 -->
+<div class="industrial-card text-center flex flex-col items-center overflow-hidden group">
+<div class="w-full h-48 overflow-hidden">
+<img src="images/equipment_rental.png" alt="Equipment Rental" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+</div>
+<div class="p-6 flex flex-col h-full">
+<h3 class="font-headline-sm text-headline-sm text-primary dark:text-primary-fixed mb-2 uppercase transition-colors duration-300">Equipment Rental</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant dark:text-on-tertiary-container transition-colors duration-300">Extensive catalog of commercial-grade chafing dishes, ovens, and display stands.</p>
+</div>
+</div>
+<!-- Service 2 -->
+<div class="industrial-card text-center flex flex-col items-center overflow-hidden group">
+<div class="w-full h-48 overflow-hidden">
+<img src="images/buffet_setup.png" alt="Full Buffet Setup" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+</div>
+<div class="p-6 flex flex-col h-full">
+<h3 class="font-headline-sm text-headline-sm text-primary dark:text-primary-fixed mb-2 uppercase transition-colors duration-300">Full Buffet Setup</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant dark:text-on-tertiary-container transition-colors duration-300">Professional on-site assembly and arrangement of buffet lines for optimal flow.</p>
+</div>
+</div>
+<!-- Service 3 -->
+<div class="industrial-card text-center flex flex-col items-center overflow-hidden group">
+<div class="w-full h-48 overflow-hidden">
+<img src="images/delivery_collection.png" alt="Delivery & Collection" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+</div>
+<div class="p-6 flex flex-col h-full">
+<h3 class="font-headline-sm text-headline-sm text-primary dark:text-primary-fixed mb-2 uppercase transition-colors duration-300">Delivery &amp; Collection</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant dark:text-on-tertiary-container transition-colors duration-300">Punctual, secure transport of heavy machinery and delicate serving ware.</p>
+</div>
+</div>
+<!-- Service 4 -->
+<div class="industrial-card text-center flex flex-col items-center overflow-hidden group">
+<div class="w-full h-48 overflow-hidden">
+<img src="images/onsite_assistance.png" alt="On-Site Assistance" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+</div>
+<div class="p-6 flex flex-col h-full">
+<h3 class="font-headline-sm text-headline-sm text-primary dark:text-primary-fixed mb-2 uppercase transition-colors duration-300">On-Site Assistance</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant dark:text-on-tertiary-container transition-colors duration-300">Technical support staff available during your event to handle equipment issues.</p>
+</div>
+</div>
+<!-- Service 5 -->
+<div class="industrial-card text-center flex flex-col items-center overflow-hidden group">
+<div class="w-full h-48 overflow-hidden">
+<img src="images/sanitization.png" alt="Sanitization" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+</div>
+<div class="p-6 flex flex-col h-full">
+<h3 class="font-headline-sm text-headline-sm text-primary dark:text-primary-fixed mb-2 uppercase transition-colors duration-300">Sanitization</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant dark:text-on-tertiary-container transition-colors duration-300">Rigorous industrial cleaning protocols post-event to guarantee hygiene standards.</p>
+</div>
+</div>
+<!-- Service 6 -->
+<div class="industrial-card text-center flex flex-col items-center overflow-hidden group">
+<div class="w-full h-48 overflow-hidden">
+<img src="images/corporate_packages.png" alt="Corporate Packages" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+</div>
+<div class="p-6 flex flex-col h-full">
+<h3 class="font-headline-sm text-headline-sm text-primary dark:text-primary-fixed mb-2 uppercase transition-colors duration-300">Corporate Packages</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant dark:text-on-tertiary-container transition-colors duration-300">Tailored logistical solutions and volume discounts for recurring corporate clients.</p>
+</div>
+</div>
+<!-- Service 7 -->
+<div class="industrial-card text-center flex flex-col items-center overflow-hidden group">
+<div class="w-full h-48 overflow-hidden">
+<img src="images/last_minute_rental.png" alt="Last-Minute Rental" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+</div>
+<div class="p-6 flex flex-col h-full">
+<h3 class="font-headline-sm text-headline-sm text-primary dark:text-primary-fixed mb-2 uppercase transition-colors duration-300">Last-Minute Rental</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant dark:text-on-tertiary-container transition-colors duration-300">Emergency equipment dispatch available for unexpected catering needs.</p>
+</div>
+</div>
+<!-- Service 8 -->
+<div class="industrial-card text-center flex flex-col items-center overflow-hidden group">
+<div class="w-full h-48 overflow-hidden">
+<img src="images/custom_sourcing.png" alt="Custom Sourcing" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+</div>
+<div class="p-6 flex flex-col h-full">
+<h3 class="font-headline-sm text-headline-sm text-primary dark:text-primary-fixed mb-2 uppercase transition-colors duration-300">Custom Sourcing</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant dark:text-on-tertiary-container transition-colors duration-300">Procurement of specialized or niche catering equipment for unique event requirements.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Pro-Grade Sanitization Section -->
+<section class="py-section-padding-vertical bg-surface dark:bg-tertiary border-y border-stainless-silver/30 dark:border-outline/20 transition-colors duration-300">
+<div class="max-w-container-max-width mx-auto px-section-padding-horizontal">
+<div class="flex flex-col md:flex-row items-center gap-12">
+<div class="w-full md:w-1/2">
+<h2 class="font-headline-md text-headline-md text-primary dark:text-primary-fixed uppercase mb-4 transition-colors duration-300">Pro-Grade Sanitization</h2>
+<div class="w-16 h-1 bg-flame-orange mb-6"></div>
+<p class="font-body-lg text-body-lg text-on-surface-variant dark:text-on-tertiary-container mb-4 transition-colors duration-300">Our state-of-the-art UV-C sanitization chambers guarantee that every piece of equipment arrives in sterile, pristine condition. We adhere strictly to NSF standards, employing advanced thermal and ultraviolet sterilization processes that eliminate 99.9% of pathogens.</p>
+<ul class="space-y-2 font-body-md text-on-surface-variant dark:text-on-tertiary-container">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-flame-orange">check_circle</span> NSF Certified Protocols</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-flame-orange">check_circle</span> High-Intensity UV-C Treatment</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-flame-orange">check_circle</span> Thermal Steam Sterilization</li>
+</ul>
+</div>
+<div class="w-full md:w-1/2">
+<div class="rounded-lg overflow-hidden border border-stainless-silver/30 dark:border-outline/30 shadow-md">
+<img alt="Pro-Grade Sanitization Chamber" class="w-full h-auto object-cover animate-shimmer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmFqpyusidn6_VGQrzHGBmAemZTDcNjTEFX4Zxh6XIeAcFQHDF9ob_ps0t3MME-Eqq0UDgeQlw9EJ9F01S6SkCdoHeDr1k4jE7k3sodRFmFB5EIpGIPtFq5iPhXSq0HVLXVnrrrBqDCczivaSKTV3k8WMoI_5nGpA4rNDdcTnaKLrzUbzaoTRiFfCXZxTnkp7cpFyQneNKiZ9VGZpL5kdjCwqC6-KPQVh6en94ISwbazA-edi_gwH5rQ"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Rapid Response Fleet Section -->
+<section class="py-section-padding-vertical bg-surface-container dark:bg-tertiary-container transition-colors duration-300">
+<div class="max-w-container-max-width mx-auto px-section-padding-horizontal">
+<div class="flex flex-col md:flex-row-reverse items-center gap-12">
+<div class="w-full md:w-1/2">
+<h2 class="font-headline-md text-headline-md text-primary dark:text-primary-fixed uppercase mb-4 transition-colors duration-300">Rapid Response Fleet</h2>
+<div class="w-16 h-1 bg-flame-orange mb-6"></div>
+<p class="font-body-lg text-body-lg text-on-surface-variant dark:text-on-tertiary-container mb-4 transition-colors duration-300">Unexpected surge in guests? Equipment failure? Our 24/7 rapid response fleet is on standby. Equipped with GPS tracking and real-time dispatch systems, our vehicles ensure emergency deliveries reach your venue promptly, minimizing operational downtime.</p>
+<ul class="space-y-2 font-body-md text-on-surface-variant dark:text-on-tertiary-container">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-flame-orange">local_shipping</span> 24/7 Emergency Dispatch</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-flame-orange">my_location</span> GPS Fleet Tracking</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-flame-orange">timer</span> Guaranteed Delivery Windows</li>
+</ul>
+</div>
+<div class="w-full md:w-1/2 overflow-hidden rounded-lg border border-stainless-silver/30 dark:border-outline/30 shadow-md">
+<img alt="Rapid Response Delivery Fleet" class="w-full h-[400px] object-cover scale-105 animate-drift" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDl4_eUvrvUTE9JCKTjc0qvx-poJVtghFDTsjuATwzbAKIEPtBOP06aXqLY-TKu_ldYP3aSnqTDr4XDPj6HEatO3fdgw8Vb2eE4WPL2H1_IXGUfYu0lakmB9FkUxBJCf-WBrAK9c5OyXCYjmyVtr2Ubjvm6UplPT9ECrjas51-1QGcAkLDTQ8FFtzkeBGh4QfBxvlqLvyLV7Q8d6FFRYD4bn5kOs0XUSmGKruEc9dWxPzLlCt-HXW334w"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Curated Equipment Bundles Section -->
+<section class="py-section-padding-vertical bg-surface dark:bg-tertiary border-y border-stainless-silver/30 dark:border-outline/20 transition-colors duration-300">
+<div class="max-w-container-max-width mx-auto px-section-padding-horizontal">
+<div class="text-center mb-stack-lg">
+<h2 class="font-headline-md text-headline-md text-primary dark:text-primary-fixed uppercase transition-colors duration-300">Curated Equipment Bundles</h2>
+<div class="w-16 h-1 bg-flame-orange mx-auto mt-4 mb-6"></div>
+<p class="font-body-md text-body-md text-on-surface-variant dark:text-on-tertiary-container max-w-2xl mx-auto transition-colors duration-300">Streamline your planning with our pre-configured equipment packages, designed specifically for common catering scenarios.</p>
+</div>
+<div class="flex flex-col lg:flex-row gap-8 items-center">
+<div class="w-full lg:w-1/2">
+<img alt="Curated Equipment Bundles" class="w-full h-auto object-cover rounded-lg shadow-md border border-stainless-silver/30 dark:border-outline/30" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAs9Qdpriu3WMXSnHwbipwKM2tZSja39TpFyurQOi8_8YIRMw2lhH5LnPBgxYxfT4ocMNjSA-I3vdspMF8fBZjhCVkZT00Dg76_mFulSSWrHAHnoOYf2A-6TK23HqTUVfwVhVQOajJDzoHBY_ALXCNekdkPY05BFw3BJzJaJZdG_P9And5xXmzLD9HyD8Pp2vc1E2o_6DfVnycIy9DosoYLhUxZ-vD050aknM55kspihcqN2eWzCD3aUw"/>
+</div>
+<div class="w-full lg:w-1/2 grid grid-cols-1 gap-6">
+<!-- Bundle 1 -->
+<div class="industrial-card p-6 animate-fade-in-up delay-100 flex items-start gap-4">
+<div class="w-12 h-12 rounded bg-surface-container-low dark:bg-tertiary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-flame-orange">celebration</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-[20px] text-primary dark:text-primary-fixed uppercase mb-2">Wedding Package</h3>
+<p class="font-body-sm text-on-surface-variant dark:text-on-tertiary-container">Premium elegant chafing dishes, tiered display stands, and polished silver serving sets for formal receptions.</p>
+</div>
+</div>
+<!-- Bundle 2 -->
+<div class="industrial-card p-6 animate-fade-in-up delay-200 flex items-start gap-4">
+<div class="w-12 h-12 rounded bg-surface-container-low dark:bg-tertiary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-flame-orange">business</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-[20px] text-primary dark:text-primary-fixed uppercase mb-2">Corporate Gala</h3>
+<p class="font-body-sm text-on-surface-variant dark:text-on-tertiary-container">High-capacity warming units, beverage dispensers, and streamlined buffet stations for efficient high-volume service.</p>
+</div>
+</div>
+<!-- Bundle 3 -->
+<div class="industrial-card p-6 animate-fade-in-up delay-300 flex items-start gap-4">
+<div class="w-12 h-12 rounded bg-surface-container-low dark:bg-tertiary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-flame-orange">storefront</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-[20px] text-primary dark:text-primary-fixed uppercase mb-2">Pop-up Kitchen</h3>
+<p class="font-body-sm text-on-surface-variant dark:text-on-tertiary-container">Portable convection ovens, stainless prep tables, and robust transport carts for temporary operational setups.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Service Process -->
+<section class="bg-surface-container dark:bg-tertiary-container py-section-padding-vertical border-y border-stainless-silver/30 dark:border-outline/20 transition-colors duration-300">
+<div class="max-w-container-max-width mx-auto px-section-padding-horizontal">
+<div class="text-center mb-stack-lg">
+<h2 class="font-headline-md text-headline-md text-primary dark:text-primary-fixed uppercase transition-colors duration-300">Logistics Workflow</h2>
+<div class="w-16 h-1 bg-steel-charcoal mx-auto mt-4"></div>
+</div>
+<div class="flex flex-col md:flex-row items-center justify-between gap-8 relative">
+<!-- Connecting Line (Desktop) -->
+<div class="hidden md:block absolute top-1/2 left-0 w-full h-[1px] bg-stainless-silver dark:bg-outline -z-10 transform -translate-y-1/2 transition-colors duration-300"></div>
+<div class="bg-white dark:bg-inverse-surface p-6 rounded-full border-4 border-surface dark:border-tertiary-container w-48 h-48 flex flex-col items-center justify-center text-center shadow-sm relative z-10 transition-colors duration-300">
+<span class="font-label-bold text-flame-orange mb-1">01</span>
+<span class="material-symbols-outlined text-3xl text-steel-charcoal mb-2">assignment</span>
+<h4 class="font-headline-sm text-headline-sm text-primary dark:text-primary-fixed uppercase text-lg transition-colors duration-300">Enquiry</h4>
+</div>
+<div class="bg-white dark:bg-inverse-surface p-6 rounded-full border-4 border-surface dark:border-tertiary-container w-48 h-48 flex flex-col items-center justify-center text-center shadow-sm relative z-10 transition-colors duration-300">
+<span class="font-label-bold text-flame-orange mb-1">02</span>
+<span class="material-symbols-outlined text-3xl text-steel-charcoal mb-2">fact_check</span>
+<h4 class="font-headline-sm text-headline-sm text-primary dark:text-primary-fixed uppercase text-lg transition-colors duration-300">Confirmation</h4>
+</div>
+<div class="bg-white dark:bg-inverse-surface p-6 rounded-full border-4 border-surface dark:border-tertiary-container w-48 h-48 flex flex-col items-center justify-center text-center shadow-sm relative z-10 transition-colors duration-300">
+<span class="font-label-bold text-flame-orange mb-1">03</span>
+<span class="material-symbols-outlined text-3xl text-steel-charcoal mb-2">local_shipping</span>
+<h4 class="font-headline-sm text-headline-sm text-primary dark:text-primary-fixed uppercase text-lg transition-colors duration-300">Delivery</h4>
+</div>
+<div class="bg-white dark:bg-inverse-surface p-6 rounded-full border-4 border-surface dark:border-tertiary-container w-48 h-48 flex flex-col items-center justify-center text-center shadow-sm relative z-10 transition-colors duration-300">
+<span class="font-label-bold text-flame-orange mb-1">04</span>
+<span class="material-symbols-outlined text-3xl text-steel-charcoal mb-2">replay</span>
+<h4 class="font-headline-sm text-headline-sm text-primary dark:text-primary-fixed uppercase text-lg transition-colors duration-300">Collection</h4>
+</div>
+</div>
+</div>
+</section>
+<!-- Rental Terms FAQ -->
+<section class="py-section-padding-vertical max-w-3xl mx-auto px-section-padding-horizontal transition-colors duration-300">
+<div class="text-center mb-stack-lg">
+<h2 class="font-headline-md text-headline-md text-primary dark:text-primary-fixed uppercase transition-colors duration-300">Rental Protocol &amp; Terms</h2>
+<p class="font-body-md text-body-md text-on-surface-variant dark:text-on-tertiary-container mt-2 transition-colors duration-300">Standard operating procedures for equipment leasing.</p>
+</div>
+<div class="space-y-4">
+<!-- FAQ Item 1 -->
+<div class="industrial-card">
+<button class="w-full px-6 py-4 flex justify-between items-center focus:outline-none" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('.icon').textContent = this.querySelector('.icon').textContent === 'add' ? 'remove' : 'add';">
+<span class="font-headline-sm text-[20px] text-primary dark:text-primary-fixed uppercase transition-colors duration-300">Damage Policy</span>
+<span class="material-symbols-outlined text-steel-charcoal icon transition-colors duration-300">add</span>
+</button>
+<div class="hidden px-6 pb-4 pt-0 border-t border-stainless-silver/30 dark:border-outline/30 font-body-md text-body-md text-on-surface-variant dark:text-on-tertiary-container transition-colors duration-300">
+<p class="mt-4">All equipment is inspected prior to dispatch. Clients are responsible for any damages incurred during the rental period beyond normal wear and tear. Repair or replacement costs will be deducted from the security deposit.</p>
+</div>
+</div>
+<!-- FAQ Item 2 -->
+<div class="industrial-card">
+<button class="w-full px-6 py-4 flex justify-between items-center focus:outline-none" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('.icon').textContent = this.querySelector('.icon').textContent === 'add' ? 'remove' : 'add';">
+<span class="font-headline-sm text-[20px] text-primary dark:text-primary-fixed uppercase transition-colors duration-300">Security Deposits</span>
+<span class="material-symbols-outlined text-steel-charcoal icon transition-colors duration-300">add</span>
+</button>
+<div class="hidden px-6 pb-4 pt-0 border-t border-stainless-silver/30 dark:border-outline/30 font-body-md text-body-md text-on-surface-variant dark:text-on-tertiary-container transition-colors duration-300">
+<p class="mt-4">A standard 20% security deposit is required for all heavy machinery and premium fragile items. This hold is released within 48 hours of satisfactory equipment return and inspection.</p>
+</div>
+</div>
+<!-- FAQ Item 3 -->
+<div class="industrial-card">
+<button class="w-full px-6 py-4 flex justify-between items-center focus:outline-none" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('.icon').textContent = this.querySelector('.icon').textContent === 'add' ? 'remove' : 'add';">
+<span class="font-headline-sm text-[20px] text-primary dark:text-primary-fixed uppercase transition-colors duration-300">Cancellation Timeline</span>
+<span class="material-symbols-outlined text-steel-charcoal icon transition-colors duration-300">add</span>
+</button>
+<div class="hidden px-6 pb-4 pt-0 border-t border-stainless-silver/30 dark:border-outline/30 font-body-md text-body-md text-on-surface-variant dark:text-on-tertiary-container transition-colors duration-300">
+<p class="mt-4">Cancellations made 72 hours prior to dispatch incur no penalty. Cancellations within 48 hours are subject to a 25% restocking fee. Same-day cancellations will be charged the full logistics rate.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<!-- Footer -->
+<footer class="bg-surface dark:bg-tertiary text-on-surface dark:text-on-tertiary relative w-full border-t border-silver dark:border-outline-variant/20 mt-auto">
+    <!-- Main Footer Content -->
+    <div class="px-section-padding-horizontal py-16 md:py-20 max-w-container-max-width mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+            
+            <!-- Brand Column -->
+            <div class="flex flex-col gap-6">
+                <a href="home.html" class="inline-block">
+                    <span class="font-display-lg text-3xl text-secondary dark:text-primary-fixed font-bold uppercase tracking-tighter">ChefRent Pro</span>
+                </a>
+                <p class="font-body-md text-on-surface-variant dark:text-on-tertiary-container leading-relaxed">
+                    Premium equipment logistics and robust rental solutions for high-stakes catering events nationwide.
+                </p>
+                <div class="flex items-center gap-4 mt-2">
+                    <a href="#" class="w-10 h-10 rounded-full bg-surface-container-high dark:bg-surface-container-highest flex items-center justify-center text-on-surface-variant dark:text-on-tertiary-container hover:bg-secondary hover:text-white dark:hover:bg-primary-fixed dark:hover:text-on-primary-container transition-all duration-300 hover:-translate-y-1">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd"></path></svg>
+                    </a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-surface-container-high dark:bg-surface-container-highest flex items-center justify-center text-on-surface-variant dark:text-on-tertiary-container hover:bg-secondary hover:text-white dark:hover:bg-primary-fixed dark:hover:text-on-primary-container transition-all duration-300 hover:-translate-y-1">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path></svg>
+                    </a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-surface-container-high dark:bg-surface-container-highest flex items-center justify-center text-on-surface-variant dark:text-on-tertiary-container hover:bg-secondary hover:text-white dark:hover:bg-primary-fixed dark:hover:text-on-primary-container transition-all duration-300 hover:-translate-y-1">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd"></path></svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h4 class="font-headline-sm text-xl font-bold mb-6 text-on-surface dark:text-white">Quick Links</h4>
+                <ul class="flex flex-col gap-3">
+                    <li><a class="group flex items-center font-body-md text-on-surface-variant dark:text-on-tertiary-container hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="home.html"><span class="w-0 overflow-hidden group-hover:w-4 transition-all duration-300 material-symbols-outlined text-sm">chevron_right</span>Home</a></li>
+                    <li><a class="group flex items-center font-body-md text-on-surface-variant dark:text-on-tertiary-container hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="catalog.html"><span class="w-0 overflow-hidden group-hover:w-4 transition-all duration-300 material-symbols-outlined text-sm">chevron_right</span>Catalog</a></li>
+                    <li><a class="group flex items-center font-body-md text-on-surface-variant dark:text-on-tertiary-container hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="services.html"><span class="w-0 overflow-hidden group-hover:w-4 transition-all duration-300 material-symbols-outlined text-sm">chevron_right</span>Services</a></li>
+                    <li><a class="group flex items-center font-body-md text-on-surface-variant dark:text-on-tertiary-container hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="gallery.html"><span class="w-0 overflow-hidden group-hover:w-4 transition-all duration-300 material-symbols-outlined text-sm">chevron_right</span>Gallery</a></li>
+                    <li><a class="group flex items-center font-body-md text-on-surface-variant dark:text-on-tertiary-container hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="blog.html"><span class="w-0 overflow-hidden group-hover:w-4 transition-all duration-300 material-symbols-outlined text-sm">chevron_right</span>Blog</a></li>
+                    <li><a class="group flex items-center font-body-md text-on-surface-variant dark:text-on-tertiary-container hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="contact.html"><span class="w-0 overflow-hidden group-hover:w-4 transition-all duration-300 material-symbols-outlined text-sm">chevron_right</span>Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Equipment -->
+            <div>
+                <h4 class="font-headline-sm text-xl font-bold mb-6 text-on-surface dark:text-white">Equipment</h4>
+                <ul class="flex flex-col gap-3">
+                    <li><a class="group flex items-center font-body-md text-on-surface-variant dark:text-on-tertiary-container hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="catalog.html"><span class="w-0 overflow-hidden group-hover:w-4 transition-all duration-300 material-symbols-outlined text-sm">chevron_right</span>Chafing Dishes</a></li>
+                    <li><a class="group flex items-center font-body-md text-on-surface-variant dark:text-on-tertiary-container hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="catalog.html"><span class="w-0 overflow-hidden group-hover:w-4 transition-all duration-300 material-symbols-outlined text-sm">chevron_right</span>Serving Utensils</a></li>
+                    <li><a class="group flex items-center font-body-md text-on-surface-variant dark:text-on-tertiary-container hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="catalog.html"><span class="w-0 overflow-hidden group-hover:w-4 transition-all duration-300 material-symbols-outlined text-sm">chevron_right</span>Buffet Counters</a></li>
+                    <li><a class="group flex items-center font-body-md text-on-surface-variant dark:text-on-tertiary-container hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="catalog.html"><span class="w-0 overflow-hidden group-hover:w-4 transition-all duration-300 material-symbols-outlined text-sm">chevron_right</span>Crockery Sets</a></li>
+                    <li><a class="group flex items-center font-body-md text-on-surface-variant dark:text-on-tertiary-container hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="catalog.html"><span class="w-0 overflow-hidden group-hover:w-4 transition-all duration-300 material-symbols-outlined text-sm">chevron_right</span>Gas Stoves</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact & Newsletter -->
+            <div class="flex flex-col gap-6">
+                <h4 class="font-headline-sm text-xl font-bold mb-2 text-on-surface dark:text-white">Get in Touch</h4>
+                <ul class="flex flex-col gap-4">
+                    <li class="flex items-start gap-3">
+                        <span class="material-symbols-outlined text-secondary dark:text-primary-fixed mt-1">location_on</span>
+                        <span class="font-body-md text-on-surface-variant dark:text-on-tertiary-container">123 Culinary Ave, Suite 100<br>New York, NY 10012</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-secondary dark:text-primary-fixed">phone</span>
+                        <span class="font-body-md text-on-surface-variant dark:text-on-tertiary-container">1-800-CHEF-PRO</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-secondary dark:text-primary-fixed">mail</span>
+                        <span class="font-body-md text-on-surface-variant dark:text-on-tertiary-container">logistics@chefrentpro.com</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Bottom Bar -->
+    <div class="border-t border-silver dark:border-outline-variant/20 bg-surface-bright dark:bg-tertiary-container">
+        <div class="px-section-padding-horizontal py-6 max-w-container-max-width mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="font-body-sm text-on-surface-variant dark:text-on-tertiary-container text-center md:text-left">
+                © 2026 ChefRent Pro. All rights reserved.
+            </p>
+            <div class="flex items-center justify-center md:justify-end gap-6 w-full md:w-auto">
+                <a href="#" class="font-body-sm text-on-surface-variant dark:text-on-tertiary-container hover:text-secondary dark:hover:text-secondary-fixed transition-colors">Privacy Policy</a>
+                <a href="#" class="font-body-sm text-on-surface-variant dark:text-on-tertiary-container hover:text-secondary dark:hover:text-secondary-fixed transition-colors">Terms of Service</a>
+            </div>
+        </div>
+    </div>
+</footer>
+<script>
+        // Simple mobile menu toggle
+        document.querySelector('.md\\:hidden.text-on-surface').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            if(menu.classList.contains('translate-x-full')) {
+                menu.classList.remove('translate-x-full');
+            } else {
+                menu.classList.add('translate-x-full');
+            }
+        });
+        
+        
+    
+        // RTL Toggle Logic
+        const rtlToggle = document.getElementById('rtl-toggle');
+        if (rtlToggle) {
+            rtlToggle.addEventListener('click', () => {
+                const html = document.documentElement;
+                if (html.getAttribute('dir') === 'rtl') {
+                    html.setAttribute('dir', 'ltr');
+                } else {
+                    html.setAttribute('dir', 'rtl');
+                }
+            });
+        }
+</script>
+
+    <script>
+        (function() {
+            const toggle = document.getElementById('theme-toggle');
+            
+            // Set initial icon based on current theme from localStorage/system
+            const html = document.documentElement;
+            const isDark = html.classList.contains('dark');
+            
+            if (toggle) {
+                const icon = toggle.querySelector('.material-symbols-outlined');
+                if (icon) {
+                    icon.textContent = isDark ? 'dark_mode' : 'light_mode';
+                    icon.setAttribute('data-icon', isDark ? 'dark_mode' : 'light_mode');
+                }
+                
+                toggle.addEventListener('click', () => {
+                    html.classList.toggle('dark');
+                    html.classList.toggle('light');
+                    const isDarkNow = html.classList.contains('dark');
+                    localStorage.setItem('theme', isDarkNow ? 'dark' : 'light');
+                    
+                    if (icon) {
+                        icon.textContent = isDarkNow ? 'dark_mode' : 'light_mode';
+                        icon.setAttribute('data-icon', isDarkNow ? 'dark_mode' : 'light_mode');
+                    }
+                });
+            }
+        })();
+    </script>
+</body></html>

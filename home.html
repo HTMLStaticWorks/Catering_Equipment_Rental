@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<link rel="icon" type="image/x-icon" href="https://lh3.googleusercontent.com/aida-public/AB6AXuCBupMauTgDPO5epvaCzUOWQwJmwJcoUYV_MF0th3hFZeS9u2H98O4GYiZPGYWt8sw4E4ZU5l2vFQ1VsnY3KBIk4gccgGOCjBiAMhCMbWUzbMglEmPVvgsKvokkeHIC0EmAZfPNi7KQJ9NN2fC8EL6F8kj3bbl_EHHSQFapz5wjEFD_w_fTfxor7QmyeT7IvE61IS3ugy6UybNjebo2e8YNQI_PD7KQlz_anTrXCXJ-Nnp9EzilpU3Ypg" />
+
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ChefRent Pro - Professional Equipment Logistics</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700&amp;family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "tertiary-fixed-dim": "#b8c8d9",
+                "on-secondary-container": "#571a00",
+                "tertiary": "#061722",
+                "tertiary-container": "#1c2b38",
+                "on-surface": "#111d27",
+                "secondary-fixed": "#ffdbce",
+                "outline-variant": "#c4c6cc",
+                "surface-container": "#e3effe",
+                "inverse-primary": "#b8c8da",
+                "surface-tint": "#516070",
+                "secondary-fixed-dim": "#ffb599",
+                "on-secondary": "#ffffff",
+                "on-tertiary-fixed": "#0d1d29",
+                "primary-fixed": "#d4e4f7",
+                "primary": "#061624",
+                "surface-container-highest": "#d8e4f3",
+                "surface-container-lowest": "#ffffff",
+                "secondary": "#a73a00",
+                "on-error": "#ffffff",
+                "tertiary-fixed": "#d4e4f5",
+                "surface-bright": "#f7f9ff",
+                "on-tertiary-container": "#8392a2",
+                "on-primary-container": "#8392a4",
+                "error-container": "#ffdad6",
+                "surface": "#f7f9ff",
+                "background": "#f7f9ff",
+                "primary-container": "#1c2b39",
+                "on-tertiary-fixed-variant": "#394856",
+                "surface-dim": "#d0dbea",
+                "on-background": "#111d27",
+                "secondary-container": "#fd661f",
+                "on-secondary-fixed": "#370e00",
+                "on-primary-fixed-variant": "#394857",
+                "on-secondary-fixed-variant": "#7f2a00",
+                "surface-variant": "#d8e4f3",
+                "on-primary": "#ffffff",
+                "error": "#ba1a1a",
+                "inverse-surface": "#26313d",
+                "on-tertiary": "#ffffff",
+                "on-primary-fixed": "#0d1d2a",
+                "outline": "#74777c",
+                "primary-fixed-dim": "#b8c8da",
+                "on-surface-variant": "#44474c",
+                "surface-container-low": "#edf4ff",
+                "inverse-on-surface": "#e8f2ff",
+                "on-error-container": "#93000a",
+                "surface-container-high": "#dee9f8"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+        },
+        "spacing": {
+                "section-padding-horizontal": "24px",
+                "stack-lg": "32px",
+                "gutter": "24px",
+                "stack-sm": "8px",
+                "container-max-width": "1280px",
+                "stack-md": "16px",
+                "section-padding-vertical": "100px"
+        },
+        "fontFamily": {
+                "label-bold": [
+                        "Inter"
+                ],
+                "headline-md": [
+                        "Barlow Condensed"
+                ],
+                "headline-sm": [
+                        "Barlow Condensed"
+                ],
+                "display-lg": [
+                        "Barlow Condensed"
+                ],
+                "display-lg-mobile": [
+                        "Barlow Condensed"
+                ],
+                "body-lg": [
+                        "Inter"
+                ],
+                "body-md": [
+                        "Inter"
+                ],
+                "body-sm": [
+                        "Inter"
+                ]
+        },
+        "fontSize": {
+                "label-bold": [
+                        "12px",
+                        {
+                                "lineHeight": "1",
+                                "letterSpacing": "0.05em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "headline-md": [
+                        "32px",
+                        {
+                                "lineHeight": "1.2",
+                                "fontWeight": "600"
+                        }
+                ],
+                "headline-sm": [
+                        "24px",
+                        {
+                                "lineHeight": "1.3",
+                                "fontWeight": "600"
+                        }
+                ],
+                "display-lg": [
+                        "48px",
+                        {
+                                "lineHeight": "1.1",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "display-lg-mobile": [
+                        "32px",
+                        {
+                                "lineHeight": "1.2",
+                                "fontWeight": "700"
+                        }
+                ],
+                "body-lg": [
+                        "18px",
+                        {
+                                "lineHeight": "1.6",
+                                "fontWeight": "400"
+                        }
+                ],
+                "body-md": [
+                        "16px",
+                        {
+                                "lineHeight": "1.5",
+                                "fontWeight": "400"
+                        }
+                ],
+                "body-sm": [
+                        "14px",
+                        {
+                                "lineHeight": "1.5",
+                                "fontWeight": "400"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined[data-weight="fill"] {
+            font-variation-settings: 'FILL' 1;
+        }
+        
+        /* Industrial Theme Elements */
+        .industrial-card {
+            background-color: theme('colors.surface-container-lowest');
+            border: 1px solid theme('colors.outline-variant');
+            border-radius: theme('borderRadius.lg');
+            transition: all 0.2s ease-in-out;
+        }
+        .industrial-card:hover {
+            box-shadow: 0 4px 0 0 theme('colors.outline-variant');
+            transform: translateY(-2px);
+        }
+        
+        .btn-primary {
+            background-color: theme('colors.secondary-container');
+            color: theme('colors.on-secondary-container');
+            border-radius: theme('borderRadius.DEFAULT');
+            padding: theme('spacing.stack-sm') theme('spacing.stack-md');
+            font-family: theme('fontFamily.label-bold');
+            font-size: theme('fontSize.label-bold')[0];
+            font-weight: theme('fontSize.label-bold')[1].fontWeight;
+            letter-spacing: theme('fontSize.label-bold')[1].letterSpacing;
+            text-transform: uppercase;
+            transition: all 0.2s;
+        }
+        .btn-primary:hover {
+            opacity: 0.9;
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            color: theme('colors.primary-container');
+            border: 1px solid theme('colors.outline-variant');
+            border-radius: theme('borderRadius.DEFAULT');
+            padding: theme('spacing.stack-sm') theme('spacing.stack-md');
+            font-family: theme('fontFamily.label-bold');
+            font-size: theme('fontSize.label-bold')[0];
+            font-weight: theme('fontSize.label-bold')[1].fontWeight;
+            letter-spacing: theme('fontSize.label-bold')[1].letterSpacing;
+            text-transform: uppercase;
+            transition: all 0.2s;
+        }
+        .btn-outline:hover {
+            border-color: theme('colors.primary-container');
+            background-color: theme('colors.surface-container-low');
+        }
+
+        .dark .btn-outline {
+            color: theme('colors.primary-fixed');
+        }
+        .dark .btn-outline:hover {
+            border-color: theme('colors.primary-fixed');
+            background-color: theme('colors.inverse-surface');
+        }
+
+    </style>
+
+<script>
+    if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+        document.documentElement.classList.remove('light');
+    } else {
+        document.documentElement.classList.add('light');
+        document.documentElement.classList.remove('dark');
+    }
+</script>
+</head>
+<body class="bg-background text-on-background dark:bg-tertiary dark:text-on-tertiary font-body-md text-body-md overflow-x-hidden min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="bg-surface dark:bg-inverse-surface fixed top-0 w-full h-[70px] z-50 border-b border-outline-variant/30 dark:border-outline/30 shadow-sm hidden xl:flex">
+<div class="flex justify-between items-center h-full px-section-padding-horizontal max-w-container-max-width mx-auto w-full">
+<div class="font-display-lg text-display-lg-mobile font-bold text-primary dark:text-primary-fixed">ChefRent Pro</div>
+<ul class="flex space-x-2 items-center h-full">
+<li class="h-full flex items-center"><a class="text-secondary dark:text-secondary-fixed-dim font-bold border-b-2 border-secondary font-label-bold text-label-bold h-full flex items-center hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-colors duration-200 px-2" href="home.html">Home</a></li>
+<li class="h-full flex items-center"><a class="text-on-surface-variant dark:text-on-tertiary-container hover:text-secondary font-label-bold text-label-bold h-full flex items-center hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-colors duration-200 px-2" href="home2.html">Home 2</a></li>
+<li class="h-full flex items-center"><a class="text-on-surface-variant dark:text-on-tertiary-container hover:text-secondary font-label-bold text-label-bold h-full flex items-center hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-colors duration-200 px-2" href="catalog.html">Catalog</a></li>
+<li class="h-full flex items-center"><a class="text-on-surface-variant dark:text-on-tertiary-container hover:text-secondary font-label-bold text-label-bold h-full flex items-center hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-colors duration-200 px-2" href="services.html">Services</a></li>
+<li class="h-full flex items-center"><a class="text-on-surface-variant dark:text-on-tertiary-container hover:text-secondary font-label-bold text-label-bold h-full flex items-center hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-colors duration-200 px-2" href="gallery.html">Gallery</a></li>
+<li class="h-full flex items-center"><a class="text-on-surface-variant dark:text-on-tertiary-container hover:text-secondary font-label-bold text-label-bold h-full flex items-center hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-colors duration-200 px-2" href="blog.html">Blog</a></li>
+<li class="h-full flex items-center"><a class="text-on-surface-variant dark:text-on-tertiary-container hover:text-secondary font-label-bold text-label-bold h-full flex items-center hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-colors duration-200 px-2" href="contact.html">Contact</a></li>
+</ul>
+<div class="flex items-center space-x-4">
+<button class="font-label-bold text-label-bold text-on-surface-variant dark:text-on-tertiary-container border border-outline-variant dark:border-outline/50 px-4 py-2 rounded-lg hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-colors" onclick="window.location.href='login.html'">Login</button>
+<button class="font-label-bold text-label-bold bg-secondary-container text-on-secondary-container px-6 py-2 rounded-lg hover:opacity-90 transition-opacity" onclick="window.location.href='contact.html'">Get a Quote</button>
+<button class="text-on-surface-variant dark:text-on-tertiary-container flex items-center justify-center p-2 rounded-full hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-colors" id="theme-toggle">
+<span class="material-symbols-outlined" data-icon="light_mode" style="font-variation-settings: 'FILL' 0;">light_mode</span>
+</button>
+<button aria-label="Toggle RTL" class="text-on-surface-variant dark:text-on-tertiary-container flex items-center justify-center p-2 rounded-full hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-colors" id="rtl-toggle">
+<span class="material-symbols-outlined" data-icon="format_textdirection_r_to_l" style="font-variation-settings: 'FILL' 0;">format_textdirection_r_to_l</span>
+</button>
+
+</div>
+</div>
+</nav>
+<!-- SideNavBar (Mobile) -->
+<div class="bg-surface dark:bg-inverse-surface fixed inset-y-0 right-0 w-64 z-[60] transform translate-x-full transition-transform duration-300 xl:hidden border-l border-outline-variant/30 shadow-xl flex flex-col h-full py-stack-lg" id="mobile-nav">
+<!-- Close button placeholder for interaction -->
+<button class="absolute top-4 right-4 p-2 text-on-surface dark:text-on-tertiary-container" onclick="document.getElementById('mobile-nav').classList.add('translate-x-full')">
+<span class="material-symbols-outlined" data-icon="close">close</span>
+</button>
+<div class="px-6 mb-8">
+<div class="font-display-lg-mobile text-display-lg-mobile text-primary dark:text-inverse-primary mb-1">ChefRent Pro</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant dark:text-on-tertiary-container">Professional Equipment Logistics</div>
+</div>
+<div class="flex-1 overflow-y-auto px-4">
+<a class="flex items-center bg-secondary-container text-on-secondary-container rounded-lg mx-2 my-1 p-3 scale-98 hover:bg-secondary/10 dark:hover:bg-secondary-fixed/10" href="home.html">
+<span class="material-symbols-outlined mr-4" data-icon="home">home</span>
+<span class="font-label-bold text-label-bold">Home</span>
+</a>
+            <a class="flex items-center text-on-surface-variant dark:text-on-tertiary-container hover:bg-surface-container-high rounded-lg mx-2 my-1 p-3 hover:bg-secondary/10 dark:hover:bg-secondary-fixed/10" href="home2.html">
+                <span class="material-symbols-outlined mr-4" data-icon="home_work">home_work</span>
+                <span class="font-label-bold text-label-bold">Home 2</span>
+            </a>
+<a class="flex items-center text-on-surface-variant dark:text-on-tertiary-container hover:bg-surface-container-high rounded-lg mx-2 my-1 p-3 hover:bg-secondary/10 dark:hover:bg-secondary-fixed/10" href="catalog.html">
+<span class="material-symbols-outlined mr-4" data-icon="grid_view">grid_view</span>
+<span class="font-label-bold text-label-bold">Catalog</span>
+</a>
+<a class="flex items-center text-on-surface-variant dark:text-on-tertiary-container hover:bg-surface-container-high rounded-lg mx-2 my-1 p-3 hover:bg-secondary/10 dark:hover:bg-secondary-fixed/10" href="services.html">
+<span class="material-symbols-outlined mr-4" data-icon="handyman">handyman</span>
+<span class="font-label-bold text-label-bold">Services</span>
+</a>
+<a class="flex items-center text-on-surface-variant dark:text-on-tertiary-container hover:bg-surface-container-high rounded-lg mx-2 my-1 p-3 hover:bg-secondary/10 dark:hover:bg-secondary-fixed/10" href="gallery.html">
+<span class="material-symbols-outlined mr-4" data-icon="photo_library">photo_library</span>
+<span class="font-label-bold text-label-bold">Gallery</span>
+</a>
+<a class="flex items-center text-on-surface-variant dark:text-on-tertiary-container hover:bg-surface-container-high rounded-lg mx-2 my-1 p-3 hover:bg-secondary/10 dark:hover:bg-secondary-fixed/10" href="blog.html">
+<span class="material-symbols-outlined mr-4" data-icon="article">article</span>
+<span class="font-label-bold text-label-bold">Blog</span>
+</a>
+<a class="flex items-center text-on-surface-variant dark:text-on-tertiary-container hover:bg-surface-container-high rounded-lg mx-2 my-1 p-3 hover:bg-secondary/10 dark:hover:bg-secondary-fixed/10" href="contact.html">
+<span class="material-symbols-outlined mr-4" data-icon="mail">mail</span>
+<span class="font-label-bold text-label-bold">Contact</span>
+</a>
+            <button class="flex items-center text-on-surface-variant dark:text-on-tertiary-container hover:bg-surface-container-high rounded-lg mx-2 my-1 p-3 hover:bg-secondary/10 dark:hover:bg-secondary-fixed/10 w-full text-left" onclick="document.getElementById('theme-toggle').click()">
+                <span class="material-symbols-outlined mr-4" data-icon="dark_mode">dark_mode</span>
+                <span class="font-label-bold text-label-bold">Toggle Theme</span>
+            </button>
+            <button class="flex items-center text-on-surface-variant dark:text-on-tertiary-container hover:bg-surface-container-high rounded-lg mx-2 my-1 p-3 hover:bg-secondary/10 dark:hover:bg-secondary-fixed/10 w-full text-left" onclick="document.getElementById('rtl-toggle').click()">
+                <span class="material-symbols-outlined mr-4" data-icon="swap_horiz">swap_horiz</span>
+                <span class="font-label-bold text-label-bold">Toggle RTL</span>
+            </button>
+</div>
+<div class="px-6 mt-auto space-y-4">
+<button class="w-full font-label-bold text-label-bold bg-secondary-container text-on-secondary-container px-6 py-3 rounded-lg hover:opacity-90 transition-opacity" onclick="window.location.href='contact.html'">Get a Quote</button>
+<div class="border-t border-outline-variant/30 pt-4 flex flex-col space-y-2">
+<a class="flex items-center text-on-surface-variant dark:text-on-tertiary-container p-2 hover:bg-surface-container-high dark:hover:bg-surface-container-highest rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined mr-3 text-lg" data-icon="login">login</span>
+<span class="font-label-bold text-label-bold">Login</span>
+</a>
+<a class="flex items-center text-on-surface-variant dark:text-on-tertiary-container p-2 hover:bg-surface-container-high dark:hover:bg-surface-container-highest rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined mr-3 text-lg" data-icon="settings">settings</span>
+<span class="font-label-bold text-label-bold">Settings</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Mobile header substitute to open side nav (only visible xl:hidden) -->
+<div class="xl:hidden fixed top-0 w-full h-[70px] bg-surface dark:bg-inverse-surface border-b border-outline-variant/30 z-40 flex items-center justify-between px-4">
+<div class="font-display-lg-mobile text-display-lg-mobile font-bold text-primary">ChefRent Pro</div>
+<button class="p-2 text-on-surface dark:text-on-tertiary-container" onclick="document.getElementById('mobile-nav').classList.remove('translate-x-full')">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+<main>
+<!-- Hero Section -->
+<section class="relative w-full min-h-[80vh] flex flex-col justify-center items-center text-center overflow-hidden py-section-padding-vertical px-section-padding-horizontal">
+<div class="absolute inset-0 w-full h-full z-0">
+<img alt="Professional industrial catering equipment rental hero banner." class="w-full h-full object-cover opacity-80 dark:opacity-50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxVFDaxev_KnqwraxmK6owwvxzAzckg0dWp6izmycJ6U7wZ7b7k-LtGyaOSwFTWWzPZqUoZh3IQx2TlnWh4x5AV4Ph0N6qwV2Sq4mnKfkqaGG0k0afNOVpxYfCnlGTqKIvfE8vu5VylG7crZD1AsaiPY-feuaARfUQ307MMLD8YcMf2kLIYpQv34hN34BpxamPBn_YSzhDiDPXwdiTlzW7Bx8cS88s-0NLKiEZBWPeIbrXu6eL06ZV7Q"/>
+<div class="absolute inset-0 bg-gradient-to-b from-surface/50 to-surface dark:from-tertiary/70 dark:to-tertiary"></div>
+</div>
+<div class="relative z-10 max-w-4xl mx-auto flex flex-col items-center gap-stack-lg">
+<div class="bg-surface-container-lowest/90 dark:bg-inverse-surface/90 p-4 rounded-full border border-outline-variant/50 mb-4 backdrop-blur-md animate-bounce shadow-sm">
+<span class="material-symbols-outlined text-4xl text-secondary-container" data-weight="fill">restaurant</span>
+</div>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary dark:text-on-tertiary leading-tight">
+                    Commercial Kitchen Equipment — Rented Right.
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant dark:text-on-tertiary-container max-w-2xl bg-surface-container-lowest/50 dark:bg-inverse-surface/50 p-4 rounded-lg backdrop-blur-sm">
+                    From intimate dinners to large-scale events — we have everything your catering team needs to execute flawlessly.
+                </p>
+<div class="flex flex-wrap justify-center gap-gutter mt-stack-md">
+<button class="btn-primary px-8 py-3 text-sm">Browse Catalog</button>
+<button class="btn-outline px-8 py-3 text-sm bg-surface-container-lowest/80 backdrop-blur-md dark:bg-inverse-surface/80" onclick="window.location.href='contact.html'">Get a Quote</button>
+</div>
+</div>
+</section>
+<!-- Featured Categories -->
+<section class="py-section-padding-vertical px-section-padding-horizontal max-w-container-max-width mx-auto">
+<div class="text-center mb-stack-lg">
+<h2 class="font-headline-md text-headline-md text-primary dark:text-on-tertiary">Featured Categories</h2>
+<p class="font-body-md text-body-md text-on-surface-variant dark:text-on-tertiary-container mt-2">Premium equipment for every course.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Category 1 -->
+<div class="industrial-card overflow-hidden group cursor-pointer dark:bg-tertiary-container">
+<div class="relative h-48 overflow-hidden">
+<img alt="Premium Plates" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgS2FsvZOBIQcaQJR64_GpS9Z-u-5Lca4TmAbWN1S_YujgByK7EIHdggNvQHtxIIBLXrRsyiTCoA8l-gaZB2gxOx5laD7qggl2HSrIHLx7A2B8r0ThgaIhANibzky1mKobHvGcBGimzYzWZwdYuIu1W_V65-6fZSG_TzvFoK3k6oIXa5dLl-duiC35I0VRAbM3O_98JY2vi0vniJ1gMOpFswRIjuzti9kIJ5e7JbHStP3zQFOX-fcpGw"/>
+<div class="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors duration-300"></div>
+</div>
+<div class="p-4 flex items-center gap-4">
+<span class="material-symbols-outlined text-3xl text-secondary-container">local_dining</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary dark:text-on-tertiary">Tableware &amp; Settings</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant dark:text-on-tertiary-container">Elegant plates, cutlery, and linens.</p>
+</div>
+</div>
+</div>
+<!-- Category 2 -->
+<div class="industrial-card overflow-hidden group cursor-pointer dark:bg-tertiary-container">
+<div class="relative h-48 overflow-hidden bg-surface-container-low dark:bg-surface-container-high flex items-center justify-center">
+<img alt="Buffet Equipment" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBp89Q4wKmuwKY2kEc3hpiccRtcD11xRkA2o24N7j_gHoTXPuz_ppizu7tDefaMX_CHpLC1qurtLg5S0WTxDGL0Hi1rS55chQy8zMBFWx98QY-L77GUI5DIpEa67kwiGS_az1em24aBDpiIbTnwlyTVuWJFjzuVOBVj0yz_Kyr0nu3f4CZAeM6O38trKZcz049F5W8w8uOE1I35o054QEG62L1rnCBHfTuBoKKF5eeGvvO-AafjxSbL6w"/>
+</div>
+<div class="p-4 flex items-center gap-4">
+<span class="material-symbols-outlined text-3xl text-secondary-container">room_service</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary dark:text-on-tertiary">Buffet Service</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant dark:text-on-tertiary-container">Chafing dishes, displays, and servers.</p>
+</div>
+</div>
+</div>
+<!-- Category 3 -->
+<div class="industrial-card overflow-hidden group cursor-pointer dark:bg-tertiary-container">
+<div class="relative h-48 overflow-hidden bg-surface-container-low dark:bg-surface-container-high flex items-center justify-center">
+<img alt="Cooking Equipment" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxVFDaxev_KnqwraxmK6owwvxzAzckg0dWp6izmycJ6U7wZ7b7k-LtGyaOSwFTWWzPZqUoZh3IQx2TlnWh4x5AV4Ph0N6qwV2Sq4mnKfkqaGG0k0afNOVpxYfCnlGTqKIvfE8vu5VylG7crZD1AsaiPY-feuaARfUQ307MMLD8YcMf2kLIYpQv34hN34BpxamPBn_YSzhDiDPXwdiTlzW7Bx8cS88s-0NLKiEZBWPeIbrXu6eL06ZV7Q"/>
+</div>
+<div class="p-4 flex items-center gap-4">
+<span class="material-symbols-outlined text-3xl text-secondary-container">oven_gen</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary dark:text-on-tertiary">Heavy Cooking</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant dark:text-on-tertiary-container">Ovens, ranges, and fryers.</p>
+</div>
+</div>
+</div>
+<!-- Category 4 -->
+<div class="industrial-card overflow-hidden group cursor-pointer dark:bg-tertiary-container">
+<div class="relative h-48 overflow-hidden bg-surface-container-low dark:bg-surface-container-high flex items-center justify-center">
+<img alt="Refrigeration Equipment" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="refrigeration.png"/>
+</div>
+<div class="p-4 flex items-center gap-4">
+<span class="material-symbols-outlined text-3xl text-secondary-container">kitchen</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary dark:text-on-tertiary">Refrigeration</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant dark:text-on-tertiary-container">Coolers, freezers, and ice makers.</p>
+</div>
+</div>
+</div>
+<!-- Category 5 -->
+<div class="industrial-card overflow-hidden group cursor-pointer dark:bg-tertiary-container">
+<div class="relative h-48 overflow-hidden bg-surface-container-low dark:bg-surface-container-high flex items-center justify-center">
+<img alt="Bar and Beverage Equipment" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="bar_equipment.png"/>
+</div>
+<div class="p-4 flex items-center gap-4">
+<span class="material-symbols-outlined text-3xl text-secondary-container">wine_bar</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary dark:text-on-tertiary">Bar &amp; Beverage</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant dark:text-on-tertiary-container">Glassware, dispensers, and tools.</p>
+</div>
+</div>
+</div>
+<!-- Category 6 -->
+<div class="industrial-card overflow-hidden group cursor-pointer dark:bg-tertiary-container">
+<div class="relative h-48 overflow-hidden bg-surface-container-low dark:bg-surface-container-high flex items-center justify-center">
+<img alt="Logistics" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-DxkElsfaQ4ALKNKGgk-1NuzeHSudDE03dbdjBr1ZgTbDxFJi3zKh1ox75Bai4ynqVMgq5qpmiJNiX3AUt8k5FS1E6eIrOGKxwdpWe1ul939LV4tT2vkz-eY_SZjHtOFyezgpzgzbGNkcOqBmimg2N9HAyq77FI3Kw6hJXnOIATsTNnMj4AqOE36fPrvk63HFATl-96Ey8vt_-yDW_pf3c2kgtxF-aaCPHIzCBlR1VkxyWedRSs2fiw"/>
+</div>
+<div class="p-4 flex items-center gap-4">
+<span class="material-symbols-outlined text-3xl text-secondary-container">local_shipping</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary dark:text-on-tertiary">Logistics &amp; Transport</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant dark:text-on-tertiary-container">Carts, warmers, and handling.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- By the Numbers -->
+<section class="bg-surface-container-low dark:bg-surface-container-highest py-section-padding-vertical border-y border-outline-variant/30">
+<div class="max-w-container-max-width mx-auto px-section-padding-horizontal">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-stack-lg text-center">
+<div>
+<div class="font-display-lg text-display-lg text-secondary-container mb-2">500+</div>
+<div class="font-label-bold text-label-bold text-on-surface-variant dark:text-on-tertiary-container uppercase tracking-wider">Unique Items</div>
+</div>
+<div>
+<div class="font-display-lg text-display-lg text-secondary-container mb-2">1200+</div>
+<div class="font-label-bold text-label-bold text-on-surface-variant dark:text-on-tertiary-container uppercase tracking-wider">Events Equipped</div>
+</div>
+<div>
+<div class="font-display-lg text-display-lg text-secondary-container mb-2">8</div>
+<div class="font-label-bold text-label-bold text-on-surface-variant dark:text-on-tertiary-container uppercase tracking-wider">Years Experience</div>
+</div>
+<div>
+<div class="font-display-lg text-display-lg text-secondary-container mb-2">98%</div>
+<div class="font-label-bold text-label-bold text-on-surface-variant dark:text-on-tertiary-container uppercase tracking-wider">On-Time Delivery</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Rental Packages -->
+<section class="py-section-padding-vertical px-section-padding-horizontal max-w-container-max-width mx-auto">
+<div class="text-center mb-stack-lg">
+<h2 class="font-headline-md text-headline-md text-primary dark:text-on-tertiary">Curated Rental Packages</h2>
+<p class="font-body-md text-body-md text-on-surface-variant dark:text-on-tertiary-container mt-2">Simplify your planning with our bundled solutions.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter items-stretch">
+<!-- Starter Package -->
+<div class="industrial-card p-6 dark:bg-tertiary-container flex flex-col h-full">
+<h3 class="font-headline-sm text-headline-sm text-primary dark:text-on-tertiary mb-2">Starter</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant dark:text-on-tertiary-container mb-6">Perfect for intimate gatherings and small private events.</p>
+<ul class="space-y-3 mb-8 flex-grow">
+<li class="flex items-center gap-2 font-body-sm text-body-sm"><span class="material-symbols-outlined text-secondary-container text-sm">check_circle</span> Up to 50 Guests</li>
+<li class="flex items-center gap-2 font-body-sm text-body-sm"><span class="material-symbols-outlined text-secondary-container text-sm">check_circle</span> Basic Tableware</li>
+<li class="flex items-center gap-2 font-body-sm text-body-sm"><span class="material-symbols-outlined text-secondary-container text-sm">check_circle</span> 2 Chafing Dishes</li>
+</ul>
+<button class="btn-outline w-full mt-auto">View Details</button>
+</div>
+<!-- Event Package (Highlighted) -->
+<div class="industrial-card p-8 border-2 border-secondary-container relative shadow-lg dark:bg-tertiary-container transform md:-translate-y-4 flex flex-col h-full">
+<div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-secondary-container text-on-secondary-container font-label-bold text-label-bold px-4 py-1 rounded-full uppercase">Most Popular</div>
+<h3 class="font-headline-sm text-headline-sm text-primary dark:text-on-tertiary mb-2">Event Pro</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant dark:text-on-tertiary-container mb-6">Everything you need for standard corporate events and weddings.</p>
+<ul class="space-y-3 mb-8 flex-grow">
+<li class="flex items-center gap-2 font-body-sm text-body-sm"><span class="material-symbols-outlined text-secondary-container text-sm">check_circle</span> Up to 200 Guests</li>
+<li class="flex items-center gap-2 font-body-sm text-body-sm"><span class="material-symbols-outlined text-secondary-container text-sm">check_circle</span> Premium Settings</li>
+<li class="flex items-center gap-2 font-body-sm text-body-sm"><span class="material-symbols-outlined text-secondary-container text-sm">check_circle</span> Full Buffet Setup</li>
+<li class="flex items-center gap-2 font-body-sm text-body-sm"><span class="material-symbols-outlined text-secondary-container text-sm">check_circle</span> Delivery &amp; Pickup</li>
+</ul>
+<button class="btn-primary w-full mt-auto" onclick="window.location.href='contact.html'">Get Quote</button>
+</div>
+<!-- Grand Package -->
+<div class="industrial-card p-6 dark:bg-tertiary-container flex flex-col h-full">
+<h3 class="font-headline-sm text-headline-sm text-primary dark:text-on-tertiary mb-2">Grand Gala</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant dark:text-on-tertiary-container mb-6">Large scale catering support with heavy equipment inclusion.</p>
+<ul class="space-y-3 mb-8 flex-grow">
+<li class="flex items-center gap-2 font-body-sm text-body-sm"><span class="material-symbols-outlined text-secondary-container text-sm">check_circle</span> 500+ Guests</li>
+<li class="flex items-center gap-2 font-body-sm text-body-sm"><span class="material-symbols-outlined text-secondary-container text-sm">check_circle</span> Luxury Collections</li>
+<li class="flex items-center gap-2 font-body-sm text-body-sm"><span class="material-symbols-outlined text-secondary-container text-sm">check_circle</span> Heavy Cooking Prep</li>
+<li class="flex items-center gap-2 font-body-sm text-body-sm"><span class="material-symbols-outlined text-secondary-container text-sm">check_circle</span> Dedicated Logistics Rep</li>
+</ul>
+<button class="btn-outline w-full mt-auto">View Details</button>
+</div>
+</div>
+</section>
+<!-- How It Works -->
+<section class="bg-surface-bright dark:bg-tertiary py-section-padding-vertical border-y border-outline-variant/30">
+<div class="max-w-container-max-width mx-auto px-section-padding-horizontal">
+<div class="text-center mb-stack-lg">
+<h2 class="font-headline-md text-headline-md text-primary dark:text-on-tertiary">How It Works</h2>
+<p class="font-body-md text-body-md text-on-surface-variant dark:text-on-tertiary-container mt-2">Streamlined logistics for busy catering professionals.</p>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-start relative mt-8">
+<!-- Connecting Line -->
+<div class="hidden md:block absolute top-24 left-1/6 right-1/6 h-0.5 bg-outline-variant/50 z-0"></div>
+<!-- Step 1 -->
+<div class="relative z-10 flex flex-col items-center text-center w-full md:w-1/3 mb-12 md:mb-0 px-4 group">
+<div class="w-full max-w-[240px] h-48 rounded-xl overflow-hidden mb-6 shadow-lg border-4 border-surface dark:border-tertiary relative">
+<img src="images/equipment_rental.png" alt="Browse & Build" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary dark:text-on-tertiary mb-2">1. Browse &amp; Build</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant dark:text-on-tertiary-container">Select your items or choose a curated package for your event size.</p>
+</div>
+<!-- Step 2 -->
+<div class="relative z-10 flex flex-col items-center text-center w-full md:w-1/3 mb-12 md:mb-0 px-4 group">
+<div class="w-full max-w-[240px] h-48 rounded-xl overflow-hidden mb-6 shadow-lg border-4 border-surface dark:border-tertiary relative">
+<img src="images/custom_sourcing.png" alt="Submit Quote" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary dark:text-on-tertiary mb-2">2. Submit Quote</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant dark:text-on-tertiary-container">Review your cart and submit. We'll confirm availability instantly.</p>
+</div>
+<!-- Step 3 -->
+<div class="relative z-10 flex flex-col items-center text-center w-full md:w-1/3 px-4 group">
+<div class="w-full max-w-[240px] h-48 rounded-xl overflow-hidden mb-6 shadow-lg border-4 border-surface dark:border-tertiary relative">
+<img src="images/delivery_collection.png" alt="Delivered" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary dark:text-on-tertiary mb-2">3. Delivered</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant dark:text-on-tertiary-container">Our professional logistics team delivers and handles the heavy lifting.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA Banner -->
+<section class="bg-primary dark:bg-inverse-surface py-16 px-section-padding-horizontal text-center">
+<div class="max-w-3xl mx-auto">
+<h2 class="font-headline-md text-headline-md text-on-primary dark:text-on-tertiary mb-4">Planning an Event? Let's Equip It.</h2>
+<p class="font-body-lg text-body-lg text-primary-fixed-dim dark:text-surface-variant mb-8">Partner with ChefRent Pro for reliable, premium equipment rentals.</p>
+<button class="btn-primary px-10 py-4 text-base" onclick="window.location.href='contact.html'">Get a Free Quote</button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface dark:bg-tertiary text-on-surface dark:text-on-tertiary relative w-full border-t border-silver dark:border-outline-variant/20 mt-auto">
+    <!-- Main Footer Content -->
+    <div class="px-section-padding-horizontal py-16 md:py-20 max-w-container-max-width mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+            
+            <!-- Brand Column -->
+            <div class="flex flex-col gap-6">
+                <a href="home.html" class="inline-block">
+                    <span class="font-display-lg text-3xl text-secondary dark:text-primary-fixed font-bold uppercase tracking-tighter">ChefRent Pro</span>
+                </a>
+                <p class="font-body-md text-on-surface-variant dark:text-on-tertiary-container leading-relaxed">
+                    Premium equipment logistics and robust rental solutions for high-stakes catering events nationwide.
+                </p>
+                <div class="flex items-center gap-4 mt-2">
+                    <a href="#" class="w-10 h-10 rounded-full bg-surface-container-high dark:bg-surface-container-highest flex items-center justify-center text-on-surface-variant dark:text-on-tertiary-container hover:bg-secondary hover:text-white dark:hover:bg-primary-fixed dark:hover:text-on-primary-container transition-all duration-300 hover:-translate-y-1">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd"></path></svg>
+                    </a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-surface-container-high dark:bg-surface-container-highest flex items-center justify-center text-on-surface-variant dark:text-on-tertiary-container hover:bg-secondary hover:text-white dark:hover:bg-primary-fixed dark:hover:text-on-primary-container transition-all duration-300 hover:-translate-y-1">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path></svg>
+                    </a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-surface-container-high dark:bg-surface-container-highest flex items-center justify-center text-on-surface-variant dark:text-on-tertiary-container hover:bg-secondary hover:text-white dark:hover:bg-primary-fixed dark:hover:text-on-primary-container transition-all duration-300 hover:-translate-y-1">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd"></path></svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h4 class="font-headline-sm text-xl font-bold mb-6 text-on-surface dark:text-white">Quick Links</h4>
+                <ul class="flex flex-col gap-3">
+                    <li><a class="group flex items-center font-body-md text-on-surface-variant dark:text-on-tertiary-container hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="home.html"><span class="w-0 overflow-hidden group-hover:w-4 transition-all duration-300 material-symbols-outlined text-sm">chevron_right</span>Home</a></li>
+                    <li><a class="group flex items-center font-body-md text-on-surface-variant dark:text-on-tertiary-container hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="catalog.html"><span class="w-0 overflow-hidden group-hover:w-4 transition-all duration-300 material-symbols-outlined text-sm">chevron_right</span>Catalog</a></li>
+                    <li><a class="group flex items-center font-body-md text-on-surface-variant dark:text-on-tertiary-container hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="services.html"><span class="w-0 overflow-hidden group-hover:w-4 transition-all duration-300 material-symbols-outlined text-sm">chevron_right</span>Services</a></li>
+                    <li><a class="group flex items-center font-body-md text-on-surface-variant dark:text-on-tertiary-container hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="gallery.html"><span class="w-0 overflow-hidden group-hover:w-4 transition-all duration-300 material-symbols-outlined text-sm">chevron_right</span>Gallery</a></li>
+                    <li><a class="group flex items-center font-body-md text-on-surface-variant dark:text-on-tertiary-container hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="blog.html"><span class="w-0 overflow-hidden group-hover:w-4 transition-all duration-300 material-symbols-outlined text-sm">chevron_right</span>Blog</a></li>
+                    <li><a class="group flex items-center font-body-md text-on-surface-variant dark:text-on-tertiary-container hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="contact.html"><span class="w-0 overflow-hidden group-hover:w-4 transition-all duration-300 material-symbols-outlined text-sm">chevron_right</span>Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Equipment -->
+            <div>
+                <h4 class="font-headline-sm text-xl font-bold mb-6 text-on-surface dark:text-white">Equipment</h4>
+                <ul class="flex flex-col gap-3">
+                    <li><a class="group flex items-center font-body-md text-on-surface-variant dark:text-on-tertiary-container hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="catalog.html"><span class="w-0 overflow-hidden group-hover:w-4 transition-all duration-300 material-symbols-outlined text-sm">chevron_right</span>Chafing Dishes</a></li>
+                    <li><a class="group flex items-center font-body-md text-on-surface-variant dark:text-on-tertiary-container hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="catalog.html"><span class="w-0 overflow-hidden group-hover:w-4 transition-all duration-300 material-symbols-outlined text-sm">chevron_right</span>Serving Utensils</a></li>
+                    <li><a class="group flex items-center font-body-md text-on-surface-variant dark:text-on-tertiary-container hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="catalog.html"><span class="w-0 overflow-hidden group-hover:w-4 transition-all duration-300 material-symbols-outlined text-sm">chevron_right</span>Buffet Counters</a></li>
+                    <li><a class="group flex items-center font-body-md text-on-surface-variant dark:text-on-tertiary-container hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="catalog.html"><span class="w-0 overflow-hidden group-hover:w-4 transition-all duration-300 material-symbols-outlined text-sm">chevron_right</span>Crockery Sets</a></li>
+                    <li><a class="group flex items-center font-body-md text-on-surface-variant dark:text-on-tertiary-container hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="catalog.html"><span class="w-0 overflow-hidden group-hover:w-4 transition-all duration-300 material-symbols-outlined text-sm">chevron_right</span>Gas Stoves</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact & Newsletter -->
+            <div class="flex flex-col gap-6">
+                <h4 class="font-headline-sm text-xl font-bold mb-2 text-on-surface dark:text-white">Get in Touch</h4>
+                <ul class="flex flex-col gap-4">
+                    <li class="flex items-start gap-3">
+                        <span class="material-symbols-outlined text-secondary dark:text-primary-fixed mt-1">location_on</span>
+                        <span class="font-body-md text-on-surface-variant dark:text-on-tertiary-container">123 Culinary Ave, Suite 100<br>New York, NY 10012</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-secondary dark:text-primary-fixed">phone</span>
+                        <span class="font-body-md text-on-surface-variant dark:text-on-tertiary-container">1-800-CHEF-PRO</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-secondary dark:text-primary-fixed">mail</span>
+                        <span class="font-body-md text-on-surface-variant dark:text-on-tertiary-container">logistics@chefrentpro.com</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Bottom Bar -->
+    <div class="border-t border-silver dark:border-outline-variant/20 bg-surface-bright dark:bg-tertiary-container">
+        <div class="px-section-padding-horizontal py-6 max-w-container-max-width mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="font-body-sm text-on-surface-variant dark:text-on-tertiary-container text-center md:text-left">
+                � 2026 ChefRent Pro. All rights reserved.
+            </p>
+            <div class="flex items-center justify-center md:justify-end gap-6 w-full md:w-auto">
+                <a href="#" class="font-body-sm text-on-surface-variant dark:text-on-tertiary-container hover:text-secondary dark:hover:text-secondary-fixed transition-colors">Privacy Policy</a>
+                <a href="#" class="font-body-sm text-on-surface-variant dark:text-on-tertiary-container hover:text-secondary dark:hover:text-secondary-fixed transition-colors">Terms of Service</a>
+            </div>
+        </div>
+    </div>
+</footer>
+<script>
+        
+    
+        // RTL Toggle Logic
+        const rtlToggle = document.getElementById('rtl-toggle');
+        if (rtlToggle) {
+            rtlToggle.addEventListener('click', () => {
+                const html = document.documentElement;
+                if (html.getAttribute('dir') === 'rtl') {
+                    html.setAttribute('dir', 'ltr');
+                } else {
+                    html.setAttribute('dir', 'rtl');
+                }
+            });
+        }
+</script>
+
+    <script>
+        (function() {
+            const toggle = document.getElementById('theme-toggle');
+            
+            // Set initial icon based on current theme from localStorage/system
+            const html = document.documentElement;
+            const isDark = html.classList.contains('dark');
+            
+            if (toggle) {
+                const icon = toggle.querySelector('.material-symbols-outlined');
+                if (icon) {
+                    icon.textContent = isDark ? 'dark_mode' : 'light_mode';
+                    icon.setAttribute('data-icon', isDark ? 'dark_mode' : 'light_mode');
+                }
+                
+                toggle.addEventListener('click', () => {
+                    html.classList.toggle('dark');
+                    html.classList.toggle('light');
+                    const isDarkNow = html.classList.contains('dark');
+                    localStorage.setItem('theme', isDarkNow ? 'dark' : 'light');
+                    
+                    if (icon) {
+                        icon.textContent = isDarkNow ? 'dark_mode' : 'light_mode';
+                        icon.setAttribute('data-icon', isDarkNow ? 'dark_mode' : 'light_mode');
+                    }
+                });
+            }
+        })();
+    </script>
+</body></html>

@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<link rel="icon" type="image/x-icon" href="https://lh3.googleusercontent.com/aida-public/AB6AXuCBupMauTgDPO5epvaCzUOWQwJmwJcoUYV_MF0th3hFZeS9u2H98O4GYiZPGYWt8sw4E4ZU5l2vFQ1VsnY3KBIk4gccgGOCjBiAMhCMbWUzbMglEmPVvgsKvokkeHIC0EmAZfPNi7KQJ9NN2fC8EL6F8kj3bbl_EHHSQFapz5wjEFD_w_fTfxor7QmyeT7IvE61IS3ugy6UybNjebo2e8YNQI_PD7KQlz_anTrXCXJ-Nnp9EzilpU3Ypg" />
+
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Blog - ChefRent Pro</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&amp;family=Inter:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error": "#ffffff",
+                        "on-tertiary-fixed": "#0d1d29",
+                        "primary": "#061624",
+                        "inverse-on-surface": "#e8f2ff",
+                        "secondary-fixed-dim": "#ffb599",
+                        "tertiary-container": "#1c2b38",
+                        "on-primary-fixed-variant": "#394857",
+                        "on-secondary-fixed": "#370e00",
+                        "surface-container-low": "#edf4ff",
+                        "primary-fixed": "#d4e4f7",
+                        "on-primary-fixed": "#0d1d2a",
+                        "surface-dim": "#d0dbea",
+                        "surface-container": "#e3effe",
+                        "on-surface": "#111d27",
+                        "secondary-container": "#fd661f",
+                        "surface-variant": "#d8e4f3",
+                        "surface": "#f7f9ff",
+                        "inverse-surface": "#26313d",
+                        "surface-container-highest": "#d8e4f3",
+                        "secondary-fixed": "#ffdbce",
+                        "primary-fixed-dim": "#b8c8da",
+                        "on-background": "#111d27",
+                        "on-tertiary-fixed-variant": "#394856",
+                        "tertiary-fixed-dim": "#b8c8d9",
+                        "error-container": "#ffdad6",
+                        "inverse-primary": "#b8c8da",
+                        "on-error-container": "#93000a",
+                        "outline-variant": "#c4c6cc",
+                        "on-tertiary": "#ffffff",
+                        "secondary": "#a73a00",
+                        "on-tertiary-container": "#8392a2",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed": "#d4e4f5",
+                        "surface-bright": "#f7f9ff",
+                        "on-secondary-fixed-variant": "#7f2a00",
+                        "primary-container": "#1c2b39",
+                        "surface-tint": "#516070",
+                        "outline": "#74777c",
+                        "on-primary-container": "#8392a4",
+                        "error": "#ba1a1a",
+                        "surface-container-high": "#dee9f8",
+                        "tertiary": "#061722",
+                        "on-surface-variant": "#44474c",
+                        "on-secondary": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "on-secondary-container": "#571a00",
+                        "background": "#f7f9ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "section-padding-horizontal": "24px",
+                        "container-max-width": "1280px",
+                        "stack-md": "16px",
+                        "stack-sm": "8px",
+                        "section-padding-vertical": "100px",
+                        "gutter": "24px",
+                        "stack-lg": "32px"
+                    },
+                    "fontFamily": {
+                        "body-sm": ["Inter"],
+                        "display-lg-mobile": ["Barlow Condensed"],
+                        "body-lg": ["Inter"],
+                        "headline-md": ["Barlow Condensed"],
+                        "headline-sm": ["Barlow Condensed"],
+                        "display-lg": ["Barlow Condensed"],
+                        "body-md": ["Inter"],
+                        "label-bold": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-sm": ["14px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "display-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-md": ["32px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "headline-sm": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "label-bold": ["12px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "700" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .industrial-shadow {
+            box-shadow: 4px 4px 0px 0px rgba(10, 22, 36, 0.1);
+        }
+        .industrial-shadow-hover:hover {
+            box-shadow: 4px 4px 0px 0px rgba(10, 22, 36, 0.3);
+            transform: translateY(-2px);
+            transition: all 0.2s ease-in-out;
+        }
+        
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-slide-up {
+            animation: slideUp 0.6s ease-out forwards;
+        }
+
+        @keyframes pulse-icon {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.2); opacity: 0.7; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        .animate-pulse-icon {
+            animation: pulse-icon 2s infinite;
+        }
+    </style>
+
+<script>
+    if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+        document.documentElement.classList.remove('light');
+    } else {
+        document.documentElement.classList.add('light');
+        document.documentElement.classList.remove('dark');
+    }
+</script>
+</head>
+<body class="bg-background text-on-background dark:bg-tertiary dark:text-on-tertiary font-body-md antialiased pt-[70px]">
+<!-- TopNavBar -->
+<nav class="bg-surface dark:bg-inverse-surface fixed top-0 w-full h-[70px] z-50 border-b border-outline-variant/30 dark:border-outline/30 shadow-sm hidden xl:flex">
+<div class="flex justify-between items-center h-full px-section-padding-horizontal max-w-container-max-width mx-auto w-full">
+<div class="font-display-lg text-display-lg-mobile font-bold text-primary dark:text-primary-fixed">ChefRent Pro</div>
+<ul class="flex space-x-2 items-center h-full">
+<li class="h-full flex items-center"><a class="text-on-surface-variant dark:text-on-tertiary-container hover:text-secondary font-label-bold text-label-bold h-full flex items-center hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-colors duration-200 px-2" href="home.html">Home</a></li>
+<li class="h-full flex items-center"><a class="text-on-surface-variant dark:text-on-tertiary-container hover:text-secondary font-label-bold text-label-bold h-full flex items-center hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-colors duration-200 px-2" href="home2.html">Home 2</a></li>
+<li class="h-full flex items-center"><a class="text-on-surface-variant dark:text-on-tertiary-container hover:text-secondary font-label-bold text-label-bold h-full flex items-center hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-colors duration-200 px-2" href="catalog.html">Catalog</a></li>
+<li class="h-full flex items-center"><a class="text-on-surface-variant dark:text-on-tertiary-container hover:text-secondary font-label-bold text-label-bold h-full flex items-center hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-colors duration-200 px-2" href="services.html">Services</a></li>
+<li class="h-full flex items-center"><a class="text-on-surface-variant dark:text-on-tertiary-container hover:text-secondary font-label-bold text-label-bold h-full flex items-center hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-colors duration-200 px-2" href="gallery.html">Gallery</a></li>
+<li class="h-full flex items-center"><a class="text-secondary dark:text-secondary-fixed-dim font-bold border-b-2 border-secondary font-label-bold text-label-bold h-full flex items-center hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-colors duration-200 px-2" href="blog.html">Blog</a></li>
+<li class="h-full flex items-center"><a class="text-on-surface-variant dark:text-on-tertiary-container hover:text-secondary font-label-bold text-label-bold h-full flex items-center hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-colors duration-200 px-2" href="contact.html">Contact</a></li>
+</ul>
+<div class="flex items-center space-x-4">
+<button class="font-label-bold text-label-bold text-on-surface-variant dark:text-on-tertiary-container border border-outline-variant dark:border-outline/50 px-4 py-2 rounded-lg hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-colors" onclick="window.location.href='login.html'">Login</button>
+<button class="font-label-bold text-label-bold bg-secondary-container text-on-secondary-container px-6 py-2 rounded-lg hover:opacity-90 transition-opacity" onclick="window.location.href='contact.html'">Get a Quote</button>
+<button class="text-on-surface-variant dark:text-on-tertiary-container flex items-center justify-center p-2 rounded-full hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-colors" id="theme-toggle">
+<span class="material-symbols-outlined" data-icon="light_mode" style="font-variation-settings: 'FILL' 0;">light_mode</span>
+</button>
+<button aria-label="Toggle RTL" class="text-on-surface-variant dark:text-on-tertiary-container flex items-center justify-center p-2 rounded-full hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-colors" id="rtl-toggle">
+<span class="material-symbols-outlined" data-icon="format_textdirection_r_to_l" style="font-variation-settings: 'FILL' 0;">format_textdirection_r_to_l</span>
+</button>
+
+</div>
+</div>
+</nav>
+<!-- SideNavBar (Mobile) -->
+<div class="bg-surface dark:bg-inverse-surface fixed inset-y-0 right-0 w-64 z-[60] transform translate-x-full transition-transform duration-300 xl:hidden border-l border-outline-variant/30 shadow-xl flex flex-col h-full py-stack-lg" id="mobile-nav">
+<!-- Close button placeholder for interaction -->
+<button class="absolute top-4 right-4 p-2 text-on-surface dark:text-on-tertiary-container" onclick="document.getElementById('mobile-nav').classList.add('translate-x-full')">
+<span class="material-symbols-outlined" data-icon="close">close</span>
+</button>
+<div class="px-6 mb-8">
+<div class="font-display-lg-mobile text-display-lg-mobile text-primary dark:text-inverse-primary mb-1">ChefRent Pro</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant dark:text-on-tertiary-container">Professional Equipment Logistics</div>
+</div>
+<div class="flex-1 overflow-y-auto px-4">
+<a class="flex items-center text-on-surface-variant dark:text-on-tertiary-container hover:bg-surface-container-high rounded-lg mx-2 my-1 p-3 hover:bg-secondary/10 dark:hover:bg-secondary-fixed/10" href="home.html">
+<span class="material-symbols-outlined mr-4" data-icon="home">home</span>
+<span class="font-label-bold text-label-bold">Home</span>
+</a>
+            <a class="flex items-center text-on-surface-variant dark:text-on-tertiary-container hover:bg-surface-container-high rounded-lg mx-2 my-1 p-3 hover:bg-secondary/10 dark:hover:bg-secondary-fixed/10" href="home2.html">
+                <span class="material-symbols-outlined mr-4" data-icon="home_work">home_work</span>
+                <span class="font-label-bold text-label-bold">Home 2</span>
+            </a>
+<a class="flex items-center text-on-surface-variant dark:text-on-tertiary-container hover:bg-surface-container-high rounded-lg mx-2 my-1 p-3 hover:bg-secondary/10 dark:hover:bg-secondary-fixed/10" href="catalog.html">
+<span class="material-symbols-outlined mr-4" data-icon="grid_view">grid_view</span>
+<span class="font-label-bold text-label-bold">Catalog</span>
+</a>
+<a class="flex items-center text-on-surface-variant dark:text-on-tertiary-container hover:bg-surface-container-high rounded-lg mx-2 my-1 p-3 hover:bg-secondary/10 dark:hover:bg-secondary-fixed/10" href="services.html">
+<span class="material-symbols-outlined mr-4" data-icon="handyman">handyman</span>
+<span class="font-label-bold text-label-bold">Services</span>
+</a>
+<a class="flex items-center text-on-surface-variant dark:text-on-tertiary-container hover:bg-surface-container-high rounded-lg mx-2 my-1 p-3 hover:bg-secondary/10 dark:hover:bg-secondary-fixed/10" href="gallery.html">
+<span class="material-symbols-outlined mr-4" data-icon="photo_library">photo_library</span>
+<span class="font-label-bold text-label-bold">Gallery</span>
+</a>
+<a class="flex items-center bg-secondary-container text-on-secondary-container rounded-lg mx-2 my-1 p-3 scale-98 hover:bg-secondary/10 dark:hover:bg-secondary-fixed/10" href="blog.html">
+<span class="material-symbols-outlined mr-4" data-icon="article">article</span>
+<span class="font-label-bold text-label-bold">Blog</span>
+</a>
+<a class="flex items-center text-on-surface-variant dark:text-on-tertiary-container hover:bg-surface-container-high rounded-lg mx-2 my-1 p-3 hover:bg-secondary/10 dark:hover:bg-secondary-fixed/10" href="contact.html">
+<span class="material-symbols-outlined mr-4" data-icon="mail">mail</span>
+<span class="font-label-bold text-label-bold">Contact</span>
+</a>
+            <button class="flex items-center text-on-surface-variant dark:text-on-tertiary-container hover:bg-surface-container-high rounded-lg mx-2 my-1 p-3 hover:bg-secondary/10 dark:hover:bg-secondary-fixed/10 w-full text-left" onclick="document.getElementById('theme-toggle').click()">
+                <span class="material-symbols-outlined mr-4" data-icon="dark_mode">dark_mode</span>
+                <span class="font-label-bold text-label-bold">Toggle Theme</span>
+            </button>
+            <button class="flex items-center text-on-surface-variant dark:text-on-tertiary-container hover:bg-surface-container-high rounded-lg mx-2 my-1 p-3 hover:bg-secondary/10 dark:hover:bg-secondary-fixed/10 w-full text-left" onclick="document.getElementById('rtl-toggle').click()">
+                <span class="material-symbols-outlined mr-4" data-icon="swap_horiz">swap_horiz</span>
+                <span class="font-label-bold text-label-bold">Toggle RTL</span>
+            </button>
+</div>
+<div class="px-6 mt-auto space-y-4">
+<button class="w-full font-label-bold text-label-bold bg-secondary-container text-on-secondary-container px-6 py-3 rounded-lg hover:opacity-90 transition-opacity" onclick="window.location.href='contact.html'">Get a Quote</button>
+<div class="border-t border-outline-variant/30 pt-4 flex flex-col space-y-2">
+<a class="flex items-center text-on-surface-variant dark:text-on-tertiary-container p-2 hover:bg-surface-container-high dark:hover:bg-surface-container-highest rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined mr-3 text-lg" data-icon="login">login</span>
+<span class="font-label-bold text-label-bold">Login</span>
+</a>
+<a class="flex items-center text-on-surface-variant dark:text-on-tertiary-container p-2 hover:bg-surface-container-high dark:hover:bg-surface-container-highest rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined mr-3 text-lg" data-icon="settings">settings</span>
+<span class="font-label-bold text-label-bold">Settings</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Mobile header substitute to open side nav (only visible xl:hidden) -->
+<div class="xl:hidden fixed top-0 w-full h-[70px] bg-surface dark:bg-inverse-surface border-b border-outline-variant/30 z-40 flex items-center justify-between px-4">
+<div class="font-display-lg-mobile text-display-lg-mobile font-bold text-primary">ChefRent Pro</div>
+<button class="p-2 text-on-surface dark:text-on-tertiary-container" onclick="document.getElementById('mobile-nav').classList.remove('translate-x-full')">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+<main>
+<!-- Hero Section -->
+<section class="relative bg-primary text-on-primary py-section-padding-vertical px-section-padding-horizontal overflow-hidden">
+<!-- Background Texture Simulation -->
+<div class="absolute inset-0 opacity-10 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-on-surface to-primary"></div>
+<div class="relative z-10 max-w-container-max-width mx-auto flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-4xl mb-6 text-secondary" data-icon="article" style="font-variation-settings: 'FILL' 1;">article</span>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-6">Catering Tips &amp; Event Insights</h1>
+<p class="font-body-lg text-body-lg max-w-2xl text-on-primary-fixed-variant">Professional guidance, equipment logistics, and best practices for flawless high-stakes event execution.</p>
+</div>
+</section>
+<!-- Blog Content Area -->
+<section class="py-section-padding-vertical px-section-padding-horizontal max-w-container-max-width mx-auto">
+<!-- Filters -->
+<div class="flex flex-wrap justify-center gap-4 mb-16">
+<button class="px-6 py-2 bg-secondary-container text-on-secondary-container font-label-bold text-label-bold rounded-full border border-secondary-container hover:opacity-90 transition-opacity">All</button>
+<button class="px-6 py-2 bg-surface dark:bg-surface-container text-on-surface-variant dark:text-on-tertiary-container font-label-bold text-label-bold rounded-full border border-outline-variant dark:border-outline/50 hover:border-primary dark:hover:border-primary-fixed hover:text-primary dark:hover:text-primary-fixed transition-colors">Event Tips</button>
+<button class="px-6 py-2 bg-surface dark:bg-surface-container text-on-surface-variant dark:text-on-tertiary-container font-label-bold text-label-bold rounded-full border border-outline-variant dark:border-outline/50 hover:border-primary dark:hover:border-primary-fixed hover:text-primary dark:hover:text-primary-fixed transition-colors">Equipment Guides</button>
+<button class="px-6 py-2 bg-surface dark:bg-surface-container text-on-surface-variant dark:text-on-tertiary-container font-label-bold text-label-bold rounded-full border border-outline-variant dark:border-outline/50 hover:border-primary dark:hover:border-primary-fixed hover:text-primary dark:hover:text-primary-fixed transition-colors">Case Studies</button>
+</div>
+<!-- Bento-style Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Article Card 1 (Large Span) -->
+<article class="col-span-1 md:col-span-2 lg:col-span-2 bg-surface-container-lowest dark:bg-tertiary-container border border-outline-variant/30 dark:border-outline/30 rounded-lg overflow-hidden industrial-shadow-hover flex flex-col md:flex-row group">
+<div class="md:w-1/2 relative h-64 md:h-auto overflow-hidden">
+<img alt="Chafing Dishes" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A highly detailed image of a professional commercial kitchen setup with gleaming stainless steel chafing dishes aligned perfectly for a large event. High contrast lighting highlighting the metal textures, flame orange accents in the background, conveying industrial precision and reliability." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwxC0xEnikWMsU0vdiQHdQIaaKUL2RMkSqATkiaynx4E71YFDvjDc8mTFbMSkOa30Gm3U74a31TUBEfMN-bO1lbWjV6SxJMLUW2Vkgw5vMQbvvzdZUZQKD0JcFs2c8AgozqG5sxQDSXIMBEhYUVNSiGS8_wwzcV3PYLYy4qXVq1yijuykZLYV8e1NpyLGPURA18wH2GY2NAsKHbkQOpmf69vnwjGu9WaWUPGxrPGAtK6UNw-dSGJ855Q"/>
+<div class="absolute top-4 left-4 bg-primary text-on-primary px-3 py-1 text-xs font-label-bold rounded-sm uppercase tracking-wider">Equipment Guides</div>
+</div>
+<div class="p-8 md:w-1/2 flex flex-col justify-center bg-surface-container-lowest dark:bg-tertiary-container">
+<div class="text-sm font-label-bold text-on-surface-variant dark:text-on-tertiary-container mb-4 flex items-center">
+<span class="material-symbols-outlined text-[16px] mr-2" data-icon="calendar_month">calendar_month</span>
+                            October 24, 2024
+                        </div>
+<h2 class="font-headline-md text-headline-md text-primary dark:text-primary-fixed mb-4">How Many Chafing Dishes Do You Need for 200 Guests?</h2>
+<p class="font-body-md text-body-md text-on-surface-variant dark:text-on-tertiary-container mb-6 line-clamp-3">Calculating the exact volume of hot holding equipment is critical for large-scale logistics. Avoid common bottlenecks with our mathematical approach to buffet line planning.</p>
+<a class="font-label-bold text-label-bold text-secondary inline-flex items-center uppercase mt-auto group-hover:text-secondary-container transition-colors" href="#">
+                            Read More
+                            <span class="material-symbols-outlined ml-2 text-sm transition-transform group-hover:translate-x-1" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Article Card 2 -->
+<article class="bg-surface-container-lowest dark:bg-tertiary-container border border-outline-variant/30 dark:border-outline/30 rounded-lg overflow-hidden industrial-shadow-hover flex flex-col group">
+<div class="relative h-48 overflow-hidden">
+<img alt="Gas vs Electric" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A detailed, sharp image comparing a heavy-duty industrial gas stove with an electric equivalent. The setting is a bright, modern commercial kitchen environment with steel charcoal and flame orange brand colors subtly integrated. High-stakes professional catering vibe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7A1JaRLm4Mt_iRzp23kMwihxiAXYTJmKRvp_DvyeFpNT1RcUu-L3Cu8OPU70W4c3DAKYRG0ozRsUTEQAAuXriQVB1kejanoempCCKNaA-A5e5suOfXlsOvfzA6pxmDRH_RJniqORegcGhUPG-8Cfsf17d6xkptmKY7C5AJ3BP7dcs8_n_p18-q6vOApaGbD7dTllIBrpb4pQ20_CBrZOvYOdh9YcQsKvjAUIXuPbZQ0EoBvKOZG4XtA"/>
+<div class="absolute top-4 left-4 bg-primary text-on-primary px-3 py-1 text-xs font-label-bold rounded-sm uppercase tracking-wider">Event Tips</div>
+</div>
+<div class="p-6 flex flex-col flex-1">
+<div class="text-sm font-label-bold text-on-surface-variant dark:text-on-tertiary-container mb-3 flex items-center">
+<span class="material-symbols-outlined text-[16px] mr-2" data-icon="calendar_month">calendar_month</span>
+                            October 18, 2024
+                        </div>
+<h3 class="font-headline-sm text-headline-sm text-primary dark:text-primary-fixed mb-3">Gas Stove vs Electric: What's Best for Outdoor Events?</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant dark:text-on-tertiary-container mb-6 line-clamp-3 flex-1">Outdoor environments present unique logistical challenges. We break down BTU requirements, power consistency, and safety protocols for field operations.</p>
+<a class="font-label-bold text-label-bold text-secondary inline-flex items-center uppercase mt-auto group-hover:text-secondary-container transition-colors" href="#">
+                            Read More
+                            <span class="material-symbols-outlined ml-2 text-sm transition-transform group-hover:translate-x-1" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Article Card 3 -->
+<article class="bg-surface-container-lowest dark:bg-tertiary-container border border-outline-variant/30 dark:border-outline/30 rounded-lg overflow-hidden industrial-shadow-hover flex flex-col group">
+<div class="relative h-48 overflow-hidden">
+<img alt="Buffet Setup" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="An immaculate, high-end wedding buffet setup viewed from a dynamic angle. Spotless stainless steel serving utensils, pristine white crockery sets, and elegant display stands arranged with mathematical precision. Corporate industrial minimalist style, bright light mode lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPQ51wCXcI7BiLXqs1RCVeCQBnI0qLLwfOH91ahiGYWW35HdktBozLGYFLW1b6jp8S1Iy82KGIJSck1hAYt0tbBd1wYgwTGCdtTvvExVZrXgc0btJRzBmgTrte83saC9CeGQhTEI12JszB95wWh_HNHWVigU65BzdYi2imuMBB_eVIJcBWRmSQ4oZOtzKks-8Au1QUUWgccdS5OgvP5vGmduQwwDuHsKkEb7TdRiDliChSi9B0rghqdQ"/>
+<div class="absolute top-4 left-4 bg-primary text-on-primary px-3 py-1 text-xs font-label-bold rounded-sm uppercase tracking-wider">Checklists</div>
+</div>
+<div class="p-6 flex flex-col flex-1">
+<div class="text-sm font-label-bold text-on-surface-variant dark:text-on-tertiary-container mb-3 flex items-center">
+<span class="material-symbols-outlined text-[16px] mr-2" data-icon="calendar_month">calendar_month</span>
+                            October 12, 2024
+                        </div>
+<h3 class="font-headline-sm text-headline-sm text-primary dark:text-primary-fixed mb-3">Complete Buffet Setup Checklist for Weddings</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant dark:text-on-tertiary-container mb-6 line-clamp-3 flex-1">From display stands to serving utensils, ensure zero operational failure during high-stakes wedding services with our exhaustive inventory checklist.</p>
+<a class="font-label-bold text-label-bold text-secondary inline-flex items-center uppercase mt-auto group-hover:text-secondary-container transition-colors" href="#">
+                            Read More
+                            <span class="material-symbols-outlined ml-2 text-sm transition-transform group-hover:translate-x-1" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Article Card 4 (Large Span) -->
+<article class="col-span-1 md:col-span-2 lg:col-span-2 bg-surface-container-lowest dark:bg-tertiary-container border border-outline-variant/30 dark:border-outline/30 rounded-lg overflow-hidden industrial-shadow-hover flex flex-col md:flex-row group">
+<div class="md:w-1/2 relative h-64 md:h-auto overflow-hidden">
+<img alt="Catering Mistakes" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A chaotic scene of a disorganized back-of-house catering setup subtly styled to look cautionary. Stainless steel equipment cluttered, contrasting with a stark, minimal, clean aesthetic border. Emphasizes the need for professional logistics and structured operations." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcnvptRCITEhqalG_EoaqzLBRJpuGJp-4XANpC7pfHwEv6gFLL2GWign3hZPi38_Sra8Krz1vy6-i2rhQbjQNBRhTxrywQtFFZ8qL8QxOYqYhcoMZIaYSbTIzx_5iDi_UDuYoY_Fy72GWJFmrc_Q8HGCTwZwFHlKZ_lB2kWKCEoBYAmWk25aFmoNvDXymunC_1a78iGcXF2SQdA9wOTKlz15sbaD3zyrQN4DTSszUTLmS1ES8aQLmS6g"/>
+<div class="absolute top-4 left-4 bg-primary text-on-primary px-3 py-1 text-xs font-label-bold rounded-sm uppercase tracking-wider">Event Tips</div>
+</div>
+<div class="p-8 md:w-1/2 flex flex-col justify-center bg-surface-container-lowest dark:bg-tertiary-container">
+<div class="text-sm font-label-bold text-on-surface-variant dark:text-on-tertiary-container mb-4 flex items-center">
+<span class="material-symbols-outlined text-[16px] mr-2" data-icon="calendar_month">calendar_month</span>
+                            October 05, 2024
+                        </div>
+<h2 class="font-headline-md text-headline-md text-primary dark:text-primary-fixed mb-4">Top 5 Mistakes Event Caterers Make (And How to Fix Them)</h2>
+<p class="font-body-md text-body-md text-on-surface-variant dark:text-on-tertiary-container mb-6 line-clamp-3">Logistical errors can ruin a reputation. We analyze the most common equipment failures and planning oversights in the catering industry and provide robust preventative strategies.</p>
+<a class="font-label-bold text-label-bold text-secondary inline-flex items-center uppercase mt-auto group-hover:text-secondary-container transition-colors" href="#">
+                            Read More
+                            <span class="material-symbols-outlined ml-2 text-sm transition-transform group-hover:translate-x-1" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</article>
+</div>
+</section>
+<!-- Section 1: Mastery & Mentorship (The Culinary Lab) -->
+<section class="py-section-padding-vertical px-section-padding-horizontal bg-surface dark:bg-tertiary">
+<div class="max-w-container-max-width mx-auto flex flex-col lg:flex-row items-center gap-gutter">
+<div class="lg:w-1/2 rounded-xl overflow-hidden shadow-xl">
+<img alt="Culinary Lab" class="w-full h-auto object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCz7XfQlAvJm-kqE1bZhg7CHt_9SjJwIM14y0cn27mUTGKrF87Wc59eykgzWEQo3csuL5GAxuP4aVuydvshojL2IV6YOyzLZn2ZwrjBOr939xR-ubZ_M6FWx5HKqAp27oXxj8-pneSDtmAPJkg39AIjpSN-273TZ5cunSXY6Idz5FCP57W_gpkqviov2TXNMA4R_B-iOGTuJcuFu8pjyuGelurpLKLhDV5o3JUGQKex1miG6k6Rjt5L5w"/>
+</div>
+<div class="lg:w-1/2 flex flex-col justify-center animate-slide-up opacity-0" style="animation-fill-mode: forwards; animation-delay: 0.2s;">
+<h2 class="font-display-lg text-primary dark:text-primary-fixed mb-4">Culinary Lab: The Science of Service</h2>
+<p class="font-body-lg text-on-surface-variant dark:text-on-tertiary-container mb-8">Inside our R&amp;D kitchen where we test every piece of equipment for high-stakes performance.</p>
+<div class="space-y-6">
+<div class="flex items-start">
+<div class="bg-secondary/10 dark:bg-secondary-fixed/10 p-3 rounded-lg mr-4 text-secondary dark:text-secondary-fixed-dim">
+<span class="material-symbols-outlined" data-icon="thermostat">thermostat</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-primary dark:text-primary-fixed mb-2">Thermal Stress Testing</h4>
+<p class="font-body-md text-on-surface-variant dark:text-on-tertiary-container">Continuous 48-hour high-heat operation to ensure zero failure during multi-day events.</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="bg-secondary/10 dark:bg-secondary-fixed/10 p-3 rounded-lg mr-4 text-secondary dark:text-secondary-fixed-dim">
+<span class="material-symbols-outlined" data-icon="build">build</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-primary dark:text-primary-fixed mb-2">Durability Assessment</h4>
+<p class="font-body-md text-on-surface-variant dark:text-on-tertiary-container">Simulated transport and high-impact usage scenarios to guarantee structural integrity.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 2: Technical Engineering (The Blueprint) -->
+<section class="relative py-section-padding-vertical px-section-padding-horizontal bg-tertiary text-on-tertiary overflow-hidden">
+<!-- STITCH_SHADER_START:ANIMATION_43 class="absolute inset-0 w-full h-full opacity-30" -->
+<div class="absolute inset-0 w-full h-full opacity-30" style="display:block;">
+<canvas id="shader-canvas-ANIMATION_43" style="display:block;width:100%;height:100%"></canvas>
+<script>
+(function() {
+  const canvas = document.getElementById('shader-canvas-ANIMATION_43');
+
+  // Sync the WebGL drawing-buffer size with the CSS-driven layout size.
+  // This fires on initial layout and whenever the element is resized.
+  function syncSize() {
+    const w = canvas.clientWidth  || 1280;
+    const h = canvas.clientHeight || 720;
+    if (canvas.width !== w || canvas.height !== h) {
+      canvas.width  = w;
+      canvas.height = h;
+    }
+  }
+  if (typeof ResizeObserver !== 'undefined') {
+    new ResizeObserver(syncSize).observe(canvas);
+  }
+  syncSize();
+
+  const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+  if (!gl) return;
+  const vs = `attribute vec2 a_position;
+varying vec2 v_texCoord;
+void main() {
+  v_texCoord = a_position * 0.5 + 0.5;
+  gl_Position = vec4(a_position, 0.0, 1.0);
+}`;
+  const fs = `precision highp float;
+varying vec2 v_texCoord;
+uniform float u_time;
+uniform vec2 u_resolution;
+
+void main() {
+    vec2 uv = v_texCoord;
+    
+    // Create a technical grid effect
+    vec2 grid = fract(uv * 20.0);
+    float line = step(0.95, max(grid.x, grid.y));
+    
+    // Pulse effect
+    float pulse = sin(u_time * 1.5) * 0.5 + 0.5;
+    
+    // Metallic background color
+    vec3 baseColor = vec3(0.05, 0.08, 0.1); // Dark Steel
+    vec3 gridColor = vec3(0.91, 0.34, 0.05) * 0.15; // Muted Flame Orange
+    
+    vec3 finalColor = mix(baseColor, gridColor, line * pulse);
+    
+    // Adding a scanning line
+    float scanLine = step(0.98, fract(uv.y * 2.0 - u_time * 0.5));
+    finalColor += vec3(0.91, 0.34, 0.05) * scanLine * 0.2;
+    
+    gl_FragColor = vec4(finalColor, 1.0);
+}`;
+  function cs(type, src) {
+    const s = gl.createShader(type);
+    gl.shaderSource(s, src);
+    gl.compileShader(s);
+    return s;
+  }
+  const prog = gl.createProgram();
+  gl.attachShader(prog, cs(gl.VERTEX_SHADER, vs));
+  gl.attachShader(prog, cs(gl.FRAGMENT_SHADER, fs));
+  gl.linkProgram(prog);
+  gl.useProgram(prog);
+  const buf = gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1, 1,-1, -1,1, 1,1]), gl.STATIC_DRAW);
+  const pos = gl.getAttribLocation(prog, 'a_position');
+  gl.enableVertexAttribArray(pos);
+  gl.vertexAttribPointer(pos, 2, gl.FLOAT, false, 0, 0);
+  const uTime = gl.getUniformLocation(prog, 'u_time');
+  const uRes = gl.getUniformLocation(prog, 'u_resolution');
+  const uMouse = gl.getUniformLocation(prog, 'u_mouse');
+
+  // u_mouse is in pixel coordinates matching u_resolution (ShaderToy convention).
+  // Shaders that need normalized coords should use: u_mouse / u_resolution.
+  let mouse = { x: canvas.width / 2, y: canvas.height / 2 };
+  window.addEventListener('mousemove', (event) => {
+    const rect = canvas.getBoundingClientRect();
+    if (rect.width && rect.height) {
+      const nx = (event.clientX - rect.left) / rect.width;
+      const ny = 1.0 - (event.clientY - rect.top) / rect.height;
+      mouse.x = nx * canvas.width;
+      mouse.y = ny * canvas.height;
+    }
+  });
+
+  function render(t) {
+    if (typeof ResizeObserver === 'undefined') syncSize();
+    gl.viewport(0, 0, canvas.width, canvas.height);
+    if (uTime) gl.uniform1f(uTime, t * 0.001);
+    if (uRes) gl.uniform2f(uRes, canvas.width, canvas.height);
+    if (uMouse) gl.uniform2f(uMouse, mouse.x, mouse.y);
+    gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+    requestAnimationFrame(render);
+  }
+  render(0);
+})();
+
+        // RTL Toggle Logic
+        const rtlToggle = document.getElementById('rtl-toggle');
+        if (rtlToggle) {
+            rtlToggle.addEventListener('click', () => {
+                const html = document.documentElement;
+                if (html.getAttribute('dir') === 'rtl') {
+                    html.setAttribute('dir', 'ltr');
+                } else {
+                    html.setAttribute('dir', 'rtl');
+                }
+            });
+        }
+</script>
+</div>
+<!-- STITCH_SHADER_END:ANIMATION_43 -->
+<div class="relative z-10 max-w-container-max-width mx-auto flex flex-col lg:flex-row items-center gap-gutter">
+<div class="lg:w-1/2 flex flex-col justify-center order-2 lg:order-1">
+<h2 class="font-display-lg text-on-tertiary mb-4">Engineered for Efficiency</h2>
+<p class="font-body-lg text-tertiary-fixed-dim mb-8">Beyond the surface: Understanding the BTU output and airflow physics of pro-grade convection.</p>
+<div class="grid grid-cols-2 gap-4">
+<div class="border border-outline-variant/20 p-4 rounded-lg bg-surface-container/5 backdrop-blur-sm">
+<div class="font-display-lg-mobile text-secondary mb-1">95%</div>
+<div class="font-label-bold text-tertiary-fixed-dim uppercase">BTU Efficiency</div>
+</div>
+<div class="border border-outline-variant/20 p-4 rounded-lg bg-surface-container/5 backdrop-blur-sm">
+<div class="font-display-lg-mobile text-secondary mb-1">2400</div>
+<div class="font-label-bold text-tertiary-fixed-dim uppercase">CFM Airflow</div>
+</div>
+</div>
+</div>
+<div class="lg:w-1/2 order-1 lg:order-2 rounded-xl overflow-hidden border border-outline-variant/20 shadow-2xl bg-black/40 p-2 backdrop-blur-md">
+<img alt="Technical Blueprint" class="w-full h-auto object-cover rounded-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_h4ddAWwv5nNVuyC3G6S0k2LJamUTmt1VG0BKkxlsSk-t3gZUud03VzUGbDvu62yzsW9oV52-ZTTDR2veD5W6JByI7_xBaZ-cBGEOYWhDNowBY-TLwG6JHg2Sw1N3VzfmNeZIJq50Jtu0vJyP103E01YruW9OyWcJHlh27Z4z2yLG--TS-J-4Gv5-SxiajeX9bAth9bYNFnrh3_kO1USPlaO3fTL0CRm9Z-Wd7josiAoOlM0m6Xcr5w"/>
+</div>
+</div>
+</section>
+<!-- Section 3: Logistics Intelligence (The Command Center) -->
+<section class="py-section-padding-vertical px-section-padding-horizontal bg-surface-container-lowest dark:bg-tertiary-container">
+<div class="max-w-container-max-width mx-auto">
+<div class="text-center mb-12">
+<h2 class="font-display-lg text-primary dark:text-primary-fixed mb-4">Zero-Latency Logistics</h2>
+<p class="font-body-lg text-on-surface-variant dark:text-on-tertiary-container max-w-3xl mx-auto">How our cloud-synced inventory system ensures your gear is scanned, sanitized, and shipped with 99.9% accuracy.</p>
+</div>
+<div class="rounded-xl overflow-hidden shadow-2xl mb-16 max-w-5xl mx-auto">
+<img alt="Logistics Command Center" class="w-full h-[500px] object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDh4hAypfhk1NoslckBec5AWo2oVMZnl2oc-qrLcMjhSbAqkyzyurnnyWj5Y_dKTgOCWeyc7YSM8j9XVaCQ8NrkbIJbWESgHWWL1eSMvSo7X0d1w1PgqPrmAqoD4ARrr2GkzrYkUoBTdJQR42Q3SixsrgFzYNyVECD4_TS_I-tbNK6N2nEOuBRPxq5U7n_RLOWpNJhNsOX4cFWjMVfBNKQG9SHf6sZcYuVVawn76Zs6Ex7ls3IGvwT7qw"/>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="text-center flex flex-col items-center">
+<div class="w-16 h-16 bg-primary-fixed rounded-full flex items-center justify-center mb-6 text-primary relative">
+<span class="material-symbols-outlined text-3xl z-10" data-icon="qr_code_scanner">qr_code_scanner</span>
+<div class="absolute inset-0 bg-primary-fixed rounded-full animate-pulse-icon"></div>
+</div>
+<h3 class="font-headline-md text-primary dark:text-primary-fixed mb-3">Precision Scanning</h3>
+<p class="font-body-md text-on-surface-variant dark:text-on-tertiary-container">Every item is RFID tagged and scanned through our proprietary multi-point verification protocol before departure.</p>
+</div>
+<div class="text-center flex flex-col items-center">
+<div class="w-16 h-16 bg-primary-fixed rounded-full flex items-center justify-center mb-6 text-primary relative">
+<span class="material-symbols-outlined text-3xl z-10" data-icon="cloud_sync">cloud_sync</span>
+<div class="absolute inset-0 bg-primary-fixed rounded-full animate-pulse-icon" style="animation-delay: 0.5s;"></div>
+</div>
+<h3 class="font-headline-md text-primary dark:text-primary-fixed mb-3">Cloud Tracking</h3>
+<p class="font-body-md text-on-surface-variant dark:text-on-tertiary-container">Real-time GPS tracking and environmental monitoring from our warehouse directly to your event staging area.</p>
+</div>
+<div class="text-center flex flex-col items-center">
+<div class="w-16 h-16 bg-primary-fixed rounded-full flex items-center justify-center mb-6 text-primary relative">
+<span class="material-symbols-outlined text-3xl z-10" data-icon="local_shipping">local_shipping</span>
+<div class="absolute inset-0 bg-primary-fixed rounded-full animate-pulse-icon" style="animation-delay: 1s;"></div>
+</div>
+<h3 class="font-headline-md text-primary dark:text-primary-fixed mb-3">Synchronized Delivery</h3>
+<p class="font-body-md text-on-surface-variant dark:text-on-tertiary-container">Optimized routing algorithms ensure arrival within strict 15-minute operational delivery windows.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<!-- Footer -->
+<footer class="bg-surface dark:bg-tertiary text-on-surface dark:text-on-tertiary relative w-full border-t border-silver dark:border-outline-variant/20 mt-auto">
+    <!-- Main Footer Content -->
+    <div class="px-section-padding-horizontal py-16 md:py-20 max-w-container-max-width mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+            
+            <!-- Brand Column -->
+            <div class="flex flex-col gap-6">
+                <a href="home.html" class="inline-block">
+                    <span class="font-display-lg text-3xl text-secondary dark:text-primary-fixed font-bold uppercase tracking-tighter">ChefRent Pro</span>
+                </a>
+                <p class="font-body-md text-on-surface-variant dark:text-on-tertiary-container leading-relaxed">
+                    Premium equipment logistics and robust rental solutions for high-stakes catering events nationwide.
+                </p>
+                <div class="flex items-center gap-4 mt-2">
+                    <a href="#" class="w-10 h-10 rounded-full bg-surface-container-high dark:bg-surface-container-highest flex items-center justify-center text-on-surface-variant dark:text-on-tertiary-container hover:bg-secondary hover:text-white dark:hover:bg-primary-fixed dark:hover:text-on-primary-container transition-all duration-300 hover:-translate-y-1">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd"></path></svg>
+                    </a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-surface-container-high dark:bg-surface-container-highest flex items-center justify-center text-on-surface-variant dark:text-on-tertiary-container hover:bg-secondary hover:text-white dark:hover:bg-primary-fixed dark:hover:text-on-primary-container transition-all duration-300 hover:-translate-y-1">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path></svg>
+                    </a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-surface-container-high dark:bg-surface-container-highest flex items-center justify-center text-on-surface-variant dark:text-on-tertiary-container hover:bg-secondary hover:text-white dark:hover:bg-primary-fixed dark:hover:text-on-primary-container transition-all duration-300 hover:-translate-y-1">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd"></path></svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h4 class="font-headline-sm text-xl font-bold mb-6 text-on-surface dark:text-white">Quick Links</h4>
+                <ul class="flex flex-col gap-3">
+                    <li><a class="group flex items-center font-body-md text-on-surface-variant dark:text-on-tertiary-container hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="home.html"><span class="w-0 overflow-hidden group-hover:w-4 transition-all duration-300 material-symbols-outlined text-sm">chevron_right</span>Home</a></li>
+                    <li><a class="group flex items-center font-body-md text-on-surface-variant dark:text-on-tertiary-container hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="catalog.html"><span class="w-0 overflow-hidden group-hover:w-4 transition-all duration-300 material-symbols-outlined text-sm">chevron_right</span>Catalog</a></li>
+                    <li><a class="group flex items-center font-body-md text-on-surface-variant dark:text-on-tertiary-container hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="services.html"><span class="w-0 overflow-hidden group-hover:w-4 transition-all duration-300 material-symbols-outlined text-sm">chevron_right</span>Services</a></li>
+                    <li><a class="group flex items-center font-body-md text-on-surface-variant dark:text-on-tertiary-container hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="gallery.html"><span class="w-0 overflow-hidden group-hover:w-4 transition-all duration-300 material-symbols-outlined text-sm">chevron_right</span>Gallery</a></li>
+                    <li><a class="group flex items-center font-body-md text-on-surface-variant dark:text-on-tertiary-container hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="blog.html"><span class="w-0 overflow-hidden group-hover:w-4 transition-all duration-300 material-symbols-outlined text-sm">chevron_right</span>Blog</a></li>
+                    <li><a class="group flex items-center font-body-md text-on-surface-variant dark:text-on-tertiary-container hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="contact.html"><span class="w-0 overflow-hidden group-hover:w-4 transition-all duration-300 material-symbols-outlined text-sm">chevron_right</span>Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Equipment -->
+            <div>
+                <h4 class="font-headline-sm text-xl font-bold mb-6 text-on-surface dark:text-white">Equipment</h4>
+                <ul class="flex flex-col gap-3">
+                    <li><a class="group flex items-center font-body-md text-on-surface-variant dark:text-on-tertiary-container hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="catalog.html"><span class="w-0 overflow-hidden group-hover:w-4 transition-all duration-300 material-symbols-outlined text-sm">chevron_right</span>Chafing Dishes</a></li>
+                    <li><a class="group flex items-center font-body-md text-on-surface-variant dark:text-on-tertiary-container hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="catalog.html"><span class="w-0 overflow-hidden group-hover:w-4 transition-all duration-300 material-symbols-outlined text-sm">chevron_right</span>Serving Utensils</a></li>
+                    <li><a class="group flex items-center font-body-md text-on-surface-variant dark:text-on-tertiary-container hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="catalog.html"><span class="w-0 overflow-hidden group-hover:w-4 transition-all duration-300 material-symbols-outlined text-sm">chevron_right</span>Buffet Counters</a></li>
+                    <li><a class="group flex items-center font-body-md text-on-surface-variant dark:text-on-tertiary-container hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="catalog.html"><span class="w-0 overflow-hidden group-hover:w-4 transition-all duration-300 material-symbols-outlined text-sm">chevron_right</span>Crockery Sets</a></li>
+                    <li><a class="group flex items-center font-body-md text-on-surface-variant dark:text-on-tertiary-container hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="catalog.html"><span class="w-0 overflow-hidden group-hover:w-4 transition-all duration-300 material-symbols-outlined text-sm">chevron_right</span>Gas Stoves</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact & Newsletter -->
+            <div class="flex flex-col gap-6">
+                <h4 class="font-headline-sm text-xl font-bold mb-2 text-on-surface dark:text-white">Get in Touch</h4>
+                <ul class="flex flex-col gap-4">
+                    <li class="flex items-start gap-3">
+                        <span class="material-symbols-outlined text-secondary dark:text-primary-fixed mt-1">location_on</span>
+                        <span class="font-body-md text-on-surface-variant dark:text-on-tertiary-container">123 Culinary Ave, Suite 100<br>New York, NY 10012</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-secondary dark:text-primary-fixed">phone</span>
+                        <span class="font-body-md text-on-surface-variant dark:text-on-tertiary-container">1-800-CHEF-PRO</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-secondary dark:text-primary-fixed">mail</span>
+                        <span class="font-body-md text-on-surface-variant dark:text-on-tertiary-container">logistics@chefrentpro.com</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Bottom Bar -->
+    <div class="border-t border-silver dark:border-outline-variant/20 bg-surface-bright dark:bg-tertiary-container">
+        <div class="px-section-padding-horizontal py-6 max-w-container-max-width mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="font-body-sm text-on-surface-variant dark:text-on-tertiary-container text-center md:text-left">
+                © 2026 ChefRent Pro. All rights reserved.
+            </p>
+            <div class="flex items-center justify-center md:justify-end gap-6 w-full md:w-auto">
+                <a href="#" class="font-body-sm text-on-surface-variant dark:text-on-tertiary-container hover:text-secondary dark:hover:text-secondary-fixed transition-colors">Privacy Policy</a>
+                <a href="#" class="font-body-sm text-on-surface-variant dark:text-on-tertiary-container hover:text-secondary dark:hover:text-secondary-fixed transition-colors">Terms of Service</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <script>
+        (function() {
+            const toggle = document.getElementById('theme-toggle');
+            
+            // Set initial icon based on current theme from localStorage/system
+            const html = document.documentElement;
+            const isDark = html.classList.contains('dark');
+            
+            if (toggle) {
+                const icon = toggle.querySelector('.material-symbols-outlined');
+                if (icon) {
+                    icon.textContent = isDark ? 'dark_mode' : 'light_mode';
+                    icon.setAttribute('data-icon', isDark ? 'dark_mode' : 'light_mode');
+                }
+                
+                toggle.addEventListener('click', () => {
+                    html.classList.toggle('dark');
+                    html.classList.toggle('light');
+                    const isDarkNow = html.classList.contains('dark');
+                    localStorage.setItem('theme', isDarkNow ? 'dark' : 'light');
+                    
+                    if (icon) {
+                        icon.textContent = isDarkNow ? 'dark_mode' : 'light_mode';
+                        icon.setAttribute('data-icon', isDarkNow ? 'dark_mode' : 'light_mode');
+                    }
+                });
+            }
+        })();
+    </script>
+</body></html>

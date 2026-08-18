@@ -383,21 +383,22 @@ function toggleMobileNav() {
 </div>
 <!-- Category Filters -->
 <div class="flex gap-2 overflow-x-auto no-scrollbar pb-2">
-<button class="px-4 py-2 bg-accent-steel text-on-surface dark:text-white font-label-bold text-label-bold rounded-DEFAULT whitespace-nowrap">All</button>
-<button class="px-4 py-2 bg-white dark:bg-tertiary text-on-surface-variant dark:text-on-tertiary-container border border-silver dark:border-outline/50 hover:border-accent-steel dark:hover:border-primary-fixed font-label-bold text-label-bold rounded-DEFAULT whitespace-nowrap transition-colors">Chafing Dishes</button>
-<button class="px-4 py-2 bg-white dark:bg-tertiary text-on-surface-variant dark:text-on-tertiary-container border border-silver dark:border-outline/50 hover:border-accent-steel dark:hover:border-primary-fixed font-label-bold text-label-bold rounded-DEFAULT whitespace-nowrap transition-colors">Buffet Counters</button>
-<button class="px-4 py-2 bg-white dark:bg-tertiary text-on-surface-variant dark:text-on-tertiary-container border border-silver dark:border-outline/50 hover:border-accent-steel dark:hover:border-primary-fixed font-label-bold text-label-bold rounded-DEFAULT whitespace-nowrap transition-colors">Gas Stoves</button>
-<button class="px-4 py-2 bg-white dark:bg-tertiary text-on-surface-variant dark:text-on-tertiary-container border border-silver dark:border-outline/50 hover:border-accent-steel dark:hover:border-primary-fixed font-label-bold text-label-bold rounded-DEFAULT whitespace-nowrap transition-colors">Utensils</button>
-<button class="px-4 py-2 bg-white dark:bg-tertiary text-on-surface-variant dark:text-on-tertiary-container border border-silver dark:border-outline/50 hover:border-accent-steel dark:hover:border-primary-fixed font-label-bold text-label-bold rounded-DEFAULT whitespace-nowrap transition-colors">Crockery</button>
-<button class="px-4 py-2 bg-white dark:bg-tertiary text-on-surface-variant dark:text-on-tertiary-container border border-silver dark:border-outline/50 hover:border-accent-steel dark:hover:border-primary-fixed font-label-bold text-label-bold rounded-DEFAULT whitespace-nowrap transition-colors">Display Stands</button>
+<button class="px-4 py-2 bg-secondary text-white font-label-bold text-label-bold rounded-DEFAULT whitespace-nowrap shadow-sm">All</button>
+<button class="px-4 py-2 bg-white dark:bg-tertiary-container text-on-surface-variant dark:text-gray-300 border border-silver dark:border-outline/50 hover:bg-secondary-container hover:text-on-secondary-container hover:border-secondary-container dark:hover:bg-secondary dark:hover:text-white dark:hover:border-secondary font-label-bold text-label-bold rounded-DEFAULT whitespace-nowrap transition-all">Chafing Dishes</button>
+<button class="px-4 py-2 bg-white dark:bg-tertiary-container text-on-surface-variant dark:text-gray-300 border border-silver dark:border-outline/50 hover:bg-secondary-container hover:text-on-secondary-container hover:border-secondary-container dark:hover:bg-secondary dark:hover:text-white dark:hover:border-secondary font-label-bold text-label-bold rounded-DEFAULT whitespace-nowrap transition-all">Buffet Counters</button>
+<button class="px-4 py-2 bg-white dark:bg-tertiary-container text-on-surface-variant dark:text-gray-300 border border-silver dark:border-outline/50 hover:bg-secondary-container hover:text-on-secondary-container hover:border-secondary-container dark:hover:bg-secondary dark:hover:text-white dark:hover:border-secondary font-label-bold text-label-bold rounded-DEFAULT whitespace-nowrap transition-all">Gas Stoves</button>
+<button class="px-4 py-2 bg-white dark:bg-tertiary-container text-on-surface-variant dark:text-gray-300 border border-silver dark:border-outline/50 hover:bg-secondary-container hover:text-on-secondary-container hover:border-secondary-container dark:hover:bg-secondary dark:hover:text-white dark:hover:border-secondary font-label-bold text-label-bold rounded-DEFAULT whitespace-nowrap transition-all">Utensils</button>
+<button class="px-4 py-2 bg-white dark:bg-tertiary-container text-on-surface-variant dark:text-gray-300 border border-silver dark:border-outline/50 hover:bg-secondary-container hover:text-on-secondary-container hover:border-secondary-container dark:hover:bg-secondary dark:hover:text-white dark:hover:border-secondary font-label-bold text-label-bold rounded-DEFAULT whitespace-nowrap transition-all">Crockery</button>
+<button class="px-4 py-2 bg-white dark:bg-tertiary-container text-on-surface-variant dark:text-gray-300 border border-silver dark:border-outline/50 hover:bg-secondary-container hover:text-on-secondary-container hover:border-secondary-container dark:hover:bg-secondary dark:hover:text-white dark:hover:border-secondary font-label-bold text-label-bold rounded-DEFAULT whitespace-nowrap transition-all">Display Stands</button>
 </div>
 </div>
 </section>
+
 <!-- Equipment Performance Visualization -->
 <section class="relative py-section-padding-vertical overflow-hidden reveal">
 <div class="absolute inset-0 z-0 bg-surface dark:bg-primary">
-<!-- STITCH_SHADER_START:ANIMATION_47 class="w-full h-full object-cover opacity-80" -->
-<div class="w-full h-full object-cover opacity-80" style="display:block;">
+<!-- STITCH_SHADER_START:ANIMATION_47 class="w-full h-full object-cover opacity-40 dark:opacity-80" -->
+<div class="w-full h-full object-cover opacity-40 dark:opacity-80" style="display:block;">
 <canvas id="shader-canvas-ANIMATION_47" style="display:block;width:100%;height:100%"></canvas>
 <script>
 (function() {
@@ -442,7 +443,7 @@ void main() {
     float pulse = sin(u_time * 1.2) * 0.5 + 0.5;
     
     // Industrial colors from design system
-    vec3 baseColor = vec3(0.07, 0.1, 0.12); // Deep Charcoal
+    vec3 baseColor = vec3(0.94, 0.96, 0.98); // Light Metallic Steel
     vec3 gridColor = vec3(0.91, 0.34, 0.05) * 0.1; // Flame Orange accent
     
     vec3 finalColor = mix(baseColor, gridColor, line * pulse);
@@ -479,44 +480,40 @@ void main() {
   let mouse = { x: canvas.width / 2, y: canvas.height / 2 };
   window.addEventListener('mousemove', (event) => {
     const rect = canvas.getBoundingClientRect();
-    if (rect.width && rect.height) {
-      const nx = (event.clientX - rect.left) / rect.width;
-      const ny = 1.0 - (event.clientY - rect.top) / rect.height;
-      mouse.x = nx * canvas.width;
-      mouse.y = ny * canvas.height;
-    }
+    mouse.x = event.clientX - rect.left;
+    mouse.y = canvas.height - (event.clientY - rect.top); // ShaderToy Y is bottom-up
   });
 
-  function render(t) {
-    if (typeof ResizeObserver === 'undefined') syncSize();
+  function render(time) {
+    syncSize();
     gl.viewport(0, 0, canvas.width, canvas.height);
-    if (uTime) gl.uniform1f(uTime, t * 0.001);
-    if (uRes) gl.uniform2f(uRes, canvas.width, canvas.height);
+    gl.uniform1f(uTime, time * 0.001);
+    gl.uniform2f(uRes, canvas.width, canvas.height);
     if (uMouse) gl.uniform2f(uMouse, mouse.x, mouse.y);
     gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
     requestAnimationFrame(render);
   }
-  render(0);
+  requestAnimationFrame(render);
 })();
 </script>
 </div>
 <!-- STITCH_SHADER_END:ANIMATION_47 -->
 </div>
 <div class="relative z-10 max-w-container-max-width mx-auto px-section-padding-horizontal">
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter items-center">
-<div class="text-on-surface dark:text-white">
-<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-stack-md text-on-surface dark:text-white">Engineered for Performance</h2>
-<p class="font-body-lg text-body-lg text-primary-fixed mb-stack-lg">Our premium equipment is rigorously tested to ensure flawless execution in high-stakes culinary environments.</p>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-stack-lg items-center">
+<div>
+<h2 class="font-headline-md text-headline-md text-primary dark:text-white uppercase tracking-tight mb-stack-sm">Built for High-Volume Reliability</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant dark:text-surface-variant mb-stack-lg">Every unit undergoes thermal stress testing and sanitization verification before dispatch.</p>
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-stack-md">
-<div class="bg-surface/10 backdrop-blur-sm border border-surface/20 p-stack-md rounded-lg transform transition hover:scale-105 hover:bg-surface/20">
+<div class="bg-surface-container-lowest/80 dark:bg-surface/10 backdrop-blur-sm border border-outline-variant/30 p-stack-md rounded-lg transform transition hover:scale-105">
 <span class="material-symbols-outlined text-secondary dark:text-secondary-container text-3xl mb-2">verified</span>
 <h3 class="font-headline-md text-headline-sm text-on-surface dark:text-white mb-1">99.8% Reliability</h3>
-<p class="font-body-sm text-primary-fixed-dim">Uptime rating across our core catalog.</p>
+<p class="font-body-sm text-on-surface-variant dark:text-primary-fixed-dim">Uptime rating across our core catalog.</p>
 </div>
-<div class="bg-surface/10 backdrop-blur-sm border border-surface/20 p-stack-md rounded-lg transform transition hover:scale-105 hover:bg-surface/20">
+<div class="bg-surface-container-lowest/80 dark:bg-surface/10 backdrop-blur-sm border border-outline-variant/30 p-stack-md rounded-lg transform transition hover:scale-105">
 <span class="material-symbols-outlined text-secondary dark:text-secondary-container text-3xl mb-2">analytics</span>
 <h3 class="font-headline-md text-headline-sm text-on-surface dark:text-white mb-1">BTU Efficiency</h3>
-<p class="font-body-sm text-primary-fixed-dim">Real-time tracking for optimal fuel usage.</p>
+<p class="font-body-sm text-on-surface-variant dark:text-primary-fixed-dim">Real-time tracking for optimal fuel usage.</p>
 </div>
 </div>
 </div>
@@ -589,7 +586,7 @@ void main() {
 <option>Wedding / Banquet</option>
 <option>Pop-up Restaurant</option>
 </select>
-<button class="mt-2 bg-accent-steel text-on-surface dark:text-white font-label-bold text-label-bold py-3 rounded-DEFAULT hover:opacity-90 transition-opacity" type="button">Request Consultation</button>
+<button class="mt-2 bg-accent-steel text-white font-label-bold text-label-bold py-3 rounded-DEFAULT hover:opacity-90 transition-opacity" type="button">Request Consultation</button>
 </form>
 </div>
 <div class="relative h-full min-h-[300px] rounded-xl overflow-hidden shadow-md">
@@ -618,7 +615,7 @@ void main() {
 <button class="w-full bg-secondary-container text-on-secondary-container font-label-bold text-label-bold py-2 rounded-DEFAULT hover:opacity-90 active:scale-[0.98] transition-all flex justify-center items-center gap-2">
 <span class="material-symbols-outlined text-[18px]">add_shopping_cart</span> Add to Enquiry
                             </button>
-<button class="w-full bg-[#fd661f] text-on-surface dark:text-white font-label-bold text-label-bold py-2.5 rounded-DEFAULT hover:bg-[#e25510] transition-all uppercase tracking-wider font-bold shadow-sm cursor-pointer border-none">View Details</button>
+<button class="w-full bg-[#fd661f] text-white font-label-bold text-label-bold py-2.5 rounded-DEFAULT hover:bg-[#e25510] transition-all uppercase tracking-wider font-bold shadow-sm cursor-pointer border-none">View Details</button>
 </div>
 </div>
 </div>
@@ -639,7 +636,7 @@ void main() {
 <button class="w-full bg-secondary-container text-on-secondary-container font-label-bold text-label-bold py-2 rounded-DEFAULT hover:opacity-90 active:scale-[0.98] transition-all flex justify-center items-center gap-2">
 <span class="material-symbols-outlined text-[18px]">add_shopping_cart</span> Add to Enquiry
                             </button>
-<button class="w-full bg-[#fd661f] text-on-surface dark:text-white font-label-bold text-label-bold py-2.5 rounded-DEFAULT hover:bg-[#e25510] transition-all uppercase tracking-wider font-bold shadow-sm cursor-pointer border-none">View Details</button>
+<button class="w-full bg-[#fd661f] text-white font-label-bold text-label-bold py-2.5 rounded-DEFAULT hover:bg-[#e25510] transition-all uppercase tracking-wider font-bold shadow-sm cursor-pointer border-none">View Details</button>
 </div>
 </div>
 </div>
@@ -660,7 +657,7 @@ void main() {
 <button class="w-full bg-secondary-container text-on-secondary-container font-label-bold text-label-bold py-2 rounded-DEFAULT hover:opacity-90 active:scale-[0.98] transition-all flex justify-center items-center gap-2">
 <span class="material-symbols-outlined text-[18px]">add_shopping_cart</span> Add to Enquiry
                             </button>
-<button class="w-full bg-[#fd661f] text-on-surface dark:text-white font-label-bold text-label-bold py-2.5 rounded-DEFAULT hover:bg-[#e25510] transition-all uppercase tracking-wider font-bold shadow-sm cursor-pointer border-none">View Details</button>
+<button class="w-full bg-[#fd661f] text-white font-label-bold text-label-bold py-2.5 rounded-DEFAULT hover:bg-[#e25510] transition-all uppercase tracking-wider font-bold shadow-sm cursor-pointer border-none">View Details</button>
 </div>
 </div>
 </div>

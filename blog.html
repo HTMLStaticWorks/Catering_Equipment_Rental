@@ -351,10 +351,10 @@ function toggleMobileNav() {
 <section class="py-section-padding-vertical px-section-padding-horizontal max-w-container-max-width mx-auto">
 <!-- Filters -->
 <div class="flex flex-wrap justify-center gap-4 mb-16">
-<button class="px-6 py-2 bg-secondary-container text-on-secondary-container font-label-bold text-label-bold rounded-full border border-secondary-container hover:opacity-90 transition-opacity">All</button>
-<button class="px-6 py-2 bg-surface dark:bg-surface-container text-on-surface-variant dark:text-on-tertiary-container font-label-bold text-label-bold rounded-full border border-outline-variant dark:border-outline/50 hover:border-primary dark:hover:border-primary-fixed hover:text-primary dark:hover:text-primary-fixed transition-colors">Event Tips</button>
-<button class="px-6 py-2 bg-surface dark:bg-surface-container text-on-surface-variant dark:text-on-tertiary-container font-label-bold text-label-bold rounded-full border border-outline-variant dark:border-outline/50 hover:border-primary dark:hover:border-primary-fixed hover:text-primary dark:hover:text-primary-fixed transition-colors">Equipment Guides</button>
-<button class="px-6 py-2 bg-surface dark:bg-surface-container text-on-surface-variant dark:text-on-tertiary-container font-label-bold text-label-bold rounded-full border border-outline-variant dark:border-outline/50 hover:border-primary dark:hover:border-primary-fixed hover:text-primary dark:hover:text-primary-fixed transition-colors">Case Studies</button>
+<button class="px-6 py-2 bg-secondary text-white font-label-bold text-label-bold rounded-full border border-secondary shadow-sm transition-all">All</button>
+<button class="px-6 py-2 bg-white dark:bg-tertiary-container text-on-surface-variant dark:text-gray-300 font-label-bold text-label-bold rounded-full border border-silver dark:border-outline/50 hover:bg-secondary-container hover:text-on-secondary-container hover:border-secondary-container dark:hover:bg-secondary dark:hover:text-white dark:hover:border-secondary transition-all">Event Tips</button>
+<button class="px-6 py-2 bg-white dark:bg-tertiary-container text-on-surface-variant dark:text-gray-300 font-label-bold text-label-bold rounded-full border border-silver dark:border-outline/50 hover:bg-secondary-container hover:text-on-secondary-container hover:border-secondary-container dark:hover:bg-secondary dark:hover:text-white dark:hover:border-secondary transition-all">Equipment Guides</button>
+<button class="px-6 py-2 bg-white dark:bg-tertiary-container text-on-surface-variant dark:text-gray-300 font-label-bold text-label-bold rounded-full border border-silver dark:border-outline/50 hover:bg-secondary-container hover:text-on-secondary-container hover:border-secondary-container dark:hover:bg-secondary dark:hover:text-white dark:hover:border-secondary transition-all">Case Studies</button>
 </div>
 <!-- Bento-style Grid -->
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
@@ -418,7 +418,7 @@ function toggleMobileNav() {
 <!-- Article Card 4 (Large Span) -->
 <article class="col-span-1 md:col-span-2 lg:col-span-2 bg-surface-container-lowest dark:bg-tertiary-container border border-outline-variant/30 dark:border-outline/30 rounded-lg overflow-hidden industrial-shadow-hover flex flex-col md:flex-row group">
 <div class="md:w-1/2 relative h-64 md:h-auto overflow-hidden">
-<img alt="Catering Mistakes" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A chaotic scene of a disorganized back-of-house catering setup subtly styled to look cautionary. Stainless steel equipment cluttered, contrasting with a stark, minimal, clean aesthetic border. Emphasizes the need for professional logistics and structured operations." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcnvptRCITEhqalG_EoaqzLBRJpuGJp-4XANpC7pfHwEv6gFLL2GWign3hZPi38_Sra8Krz1vy6-i2rhQbjQNBRhTxrywQtFFZ8qL8QxOYqYhcoMZIaYSbTIzx_5iDi_UDuYoY_Fy72GWJFmrc_Q8HGCTwZwFHlKZ_lB2kWKCEoBYAmWk25aFmoNvDXymunC_1a78iGcXF2SQdA9wOTKlz15sbaD3zyrQN4DTSszUTLmS1ES8aQLmS6g"/>
+<img alt="Catering Mistakes" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A chaotic scene of a disorganized back-of-house catering setup subtly styled to look cautionary. Stainless steel equipment cluttered, contrasting with a stark, minimal, clean aesthetic border. Emphasizes the need for professional logistics and structured operations." src="images/catering_mistakes.png"/>
 <div class="absolute top-4 left-4 bg-surface dark:bg-primary text-on-surface dark:text-on-primary px-3 py-1 text-xs font-label-bold rounded-sm uppercase tracking-wider">Event Tips</div>
 </div>
 <div class="p-8 md:w-1/2 flex flex-col justify-center bg-surface-container-lowest dark:bg-tertiary-container">
@@ -516,7 +516,7 @@ void main() {
     float pulse = sin(u_time * 1.5) * 0.5 + 0.5;
     
     // Metallic background color
-    vec3 baseColor = vec3(0.05, 0.08, 0.1); // Dark Steel
+    vec3 baseColor = vec3(0.94, 0.96, 0.98); // Light Metallic Steel
     vec3 gridColor = vec3(0.91, 0.34, 0.05) * 0.15; // Muted Flame Orange
     
     vec3 finalColor = mix(baseColor, gridColor, line * pulse);

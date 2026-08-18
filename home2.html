@@ -449,23 +449,82 @@ function toggleMobileNav() {
 }
 </script>
 
-            <!-- Right column: Feature cards -->
-            <div class="flex-shrink-0 w-full lg:w-80 flex flex-col gap-4" style="opacity: 0; animation: h2FadeSlide 0.9s ease forwards 0.7s;">
-                <div class="bg-surface-container-lowest/90 dark:bg-white/5 border border-[#E8570C]/30 rounded-2xl p-5 transition-all shadow-sm hover:shadow-md">
+<!-- Hero Section -->
+<section class="relative pt-28 pb-16 min-h-[85vh] flex items-center overflow-hidden bg-surface dark:bg-[#0A121D] border-b border-outline-variant/30 transition-colors duration-300">
+    <!-- Cinematic Commercial Kitchen Background Image Overlay -->
+    <div class="absolute inset-0 z-0 opacity-20 dark:opacity-30 bg-cover bg-center pointer-events-none" style="background-image: url('images/equipment_rental.png')"></div>
+    <div class="absolute inset-0 z-0 bg-gradient-to-r from-surface via-surface/90 to-surface/60 dark:from-[#0A121D] dark:via-[#0A121D]/90 dark:to-[#0A121D]/70 pointer-events-none"></div>
+    <div class="absolute -top-40 -left-40 w-96 h-96 bg-[#E8570C]/20 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-container-max-width mx-auto px-section-padding-horizontal w-full relative z-10">
+        <div class="flex flex-col lg:flex-row items-center justify-between gap-12">
+            
+            <!-- Left Column: Main Hero Content -->
+            <div class="flex-1 max-w-2xl text-left">
+                <!-- Badge -->
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-secondary/10 border border-secondary/30 text-secondary dark:text-secondary-fixed-dim text-xs font-bold uppercase tracking-wider mb-6 shadow-sm">
+                    <span class="w-2 h-2 rounded-full bg-[#E8570C] animate-pulse"></span>
+                    <span>#1 Enterprise Catering Logistics</span>
+                </div>
+                
+                <!-- Main H1 Heading -->
+                <h1 class="font-display-lg text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-primary dark:text-white uppercase mb-6 leading-tight">
+                    Industrial Culinary <br/>
+                    <span class="text-[#E8570C]">Equipment Rental</span>
+                </h1>
+                
+                <!-- Subtext -->
+                <p class="font-body-lg text-lg text-on-surface-variant dark:text-gray-300 mb-8 leading-relaxed max-w-xl">
+                    Commercial-grade chafing dishes, high-capacity gas ranges, and automated buffet setups. Delivered, sanitized, and supported 24/7 for high-stakes events nationwide.
+                </p>
+
+                <!-- CTA Button Group -->
+                <div class="flex flex-wrap items-center gap-4 mb-10">
+                    <button class="bg-[#E8570C] hover:bg-[#d04b08] text-white font-bold py-3.5 px-8 rounded-lg uppercase tracking-wider transition-all duration-200 shadow-lg shadow-[#E8570C]/25 cursor-pointer hover:-translate-y-0.5 active:translate-y-0 flex items-center gap-2 border-none" onclick="window.location.href='catalog.html'">
+                        <span>Explore Catalog</span>
+                        <span class="material-symbols-outlined text-lg">arrow_forward</span>
+                    </button>
+                    <button class="bg-surface-container-lowest dark:bg-white/10 text-primary dark:text-white border border-silver dark:border-white/20 hover:border-[#E8570C] font-bold py-3.5 px-8 rounded-lg uppercase tracking-wider transition-all duration-200 cursor-pointer shadow-sm hover:-translate-y-0.5" onclick="window.location.href='contact.html'">
+                        Request Quote
+                    </button>
+                </div>
+
+                <!-- Trust Metrics Bar -->
+                <div class="pt-6 border-t border-outline-variant/30 dark:border-white/10 flex items-center gap-6 sm:gap-8 flex-wrap">
+                    <div>
+                        <div class="font-display-lg text-2xl font-bold text-primary dark:text-white">5,000+</div>
+                        <div class="text-xs text-on-surface-variant dark:text-gray-400 font-medium">Events Managed</div>
+                    </div>
+                    <div class="h-8 w-px bg-outline-variant/30 dark:bg-white/10 hidden sm:block"></div>
+                    <div>
+                        <div class="font-display-lg text-2xl font-bold text-[#E8570C]">99.9%</div>
+                        <div class="text-xs text-on-surface-variant dark:text-gray-400 font-medium">On-Time Arrival</div>
+                    </div>
+                    <div class="h-8 w-px bg-outline-variant/30 dark:bg-white/10 hidden sm:block"></div>
+                    <div>
+                        <div class="font-display-lg text-2xl font-bold text-primary dark:text-white">NSF 100</div>
+                        <div class="text-xs text-on-surface-variant dark:text-gray-400 font-medium">Certified Clean</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Feature Cards -->
+            <div class="flex-shrink-0 w-full lg:w-80 flex flex-col gap-4">
+                <div class="bg-surface-container-lowest/90 dark:bg-white/5 border border-[#E8570C]/30 rounded-2xl p-5 transition-all shadow-sm hover:shadow-md hover:border-[#E8570C]">
                     <div class="flex items-center gap-3 mb-2">
                         <span class="material-symbols-outlined text-[#E8570C] text-[22px]">local_shipping</span>
                         <span class="text-primary dark:text-white font-bold text-sm">Same-Day Delivery</span>
                     </div>
                     <p class="text-on-surface-variant dark:text-white/60 text-xs leading-relaxed">Available in 30+ cities. We arrive before your crew does.</p>
                 </div>
-                <div class="bg-surface-container-lowest/90 dark:bg-white/5 border border-[#E8570C]/30 rounded-2xl p-5 transition-all shadow-sm hover:shadow-md">
+                <div class="bg-surface-container-lowest/90 dark:bg-white/5 border border-[#E8570C]/30 rounded-2xl p-5 transition-all shadow-sm hover:shadow-md hover:border-[#E8570C]">
                     <div class="flex items-center gap-3 mb-2">
                         <span class="material-symbols-outlined text-[#E8570C] text-[22px]">inventory_2</span>
                         <span class="text-primary dark:text-white font-bold text-sm">2,000+ Items In Stock</span>
                     </div>
                     <p class="text-on-surface-variant dark:text-white/60 text-xs leading-relaxed">From chafing dishes to industrial ovens — all certified clean.</p>
                 </div>
-                <div class="bg-surface-container-lowest/90 dark:bg-white/5 border border-[#E8570C]/30 rounded-2xl p-5 transition-all shadow-sm hover:shadow-md">
+                <div class="bg-surface-container-lowest/90 dark:bg-white/5 border border-[#E8570C]/30 rounded-2xl p-5 transition-all shadow-sm hover:shadow-md hover:border-[#E8570C]">
                     <div class="flex items-center gap-3 mb-2">
                         <span class="material-symbols-outlined text-[#E8570C] text-[22px]">support_agent</span>
                         <span class="text-primary dark:text-white font-bold text-sm">24/7 Event Support</span>
@@ -478,7 +537,7 @@ function toggleMobileNav() {
     </div>
 
     <!-- Bottom edge fade -->
-    <div class="absolute bottom-0 left-0 right-0 h-24 pointer-events-none z-10 bg-gradient-to-b from-transparent to-surface dark:to-[#0E1520]"></div>
+    <div class="absolute bottom-0 left-0 right-0 h-16 pointer-events-none z-10 bg-gradient-to-b from-transparent to-surface dark:to-tertiary-container"></div>
 </section>
 
 <style>
@@ -579,11 +638,11 @@ function toggleMobileNav() {
 </div>
 </section>
 <!-- Industrial Shimmer Showcase -->
-<section class="relative py-section-padding-vertical min-h-[600px] flex items-center justify-center overflow-hidden bg-[#091522]">
-<canvas class="absolute inset-0 w-full h-full z-0 opacity-90" id="shimmer-canvas"></canvas>
+<section class="relative py-section-padding-vertical min-h-[600px] flex items-center justify-center overflow-hidden bg-surface-bright dark:bg-[#091522] transition-colors duration-300">
+<canvas class="absolute inset-0 w-full h-full z-0 opacity-40 dark:opacity-90" id="shimmer-canvas"></canvas>
 <div class="relative z-10 max-w-container-max-width mx-auto px-section-padding-horizontal w-full">
-<div class="text-center mb-stack-lg max-w-3xl mx-auto bg-[#0b1724]/95 backdrop-blur-md p-6 sm:p-8 rounded-2xl border border-[#fd661f]/40 shadow-2xl relative z-10">
-<h2 class="font-display-lg text-display-lg font-bold text-white uppercase tracking-tight mb-3 drop-shadow-md">The Art of Industrial Culinary</h2>
+<div class="text-center mb-stack-lg max-w-3xl mx-auto bg-white/90 dark:bg-[#0b1724]/95 backdrop-blur-md p-6 sm:p-8 rounded-2xl border border-silver dark:border-[#fd661f]/40 shadow-2xl relative z-10 transition-colors duration-300">
+<h2 class="font-display-lg text-display-lg font-bold text-primary dark:text-white uppercase tracking-tight mb-3 drop-shadow-sm">The Art of Industrial Culinary</h2>
 <p class="font-body-lg text-body-lg text-[#fd661f] font-bold tracking-wide drop-shadow-sm">Elite Equipment for Elite Chefs</p>
 </div>
 <div class="max-w-4xl mx-auto rounded-xl p-2 bg-surface-container-lowest/90 dark:bg-[#1C2B39]/50 backdrop-blur-sm border border-[#E8570C]/50 shadow-[0_0_30px_rgba(232,87,12,0.2)]">
@@ -598,10 +657,12 @@ function toggleMobileNav() {
     const camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1);
     
     const geometry = new THREE.PlaneGeometry(2, 2);
+    const isDarkMode = document.documentElement.classList.contains('dark');
     const material = new THREE.ShaderMaterial({
         uniforms: {
             u_time: { value: 0.0 },
-            u_resolution: { value: new THREE.Vector2() }
+            u_resolution: { value: new THREE.Vector2() },
+            u_isDark: { value: isDarkMode ? 1.0 : 0.0 }
         },
         vertexShader: `
             varying vec2 v_texCoord;
@@ -615,6 +676,7 @@ function toggleMobileNav() {
             varying vec2 v_texCoord;
             uniform float u_time;
             uniform vec2 u_resolution;
+            uniform float u_isDark;
 
             void main() {
                 vec2 uv = v_texCoord;
@@ -623,8 +685,8 @@ function toggleMobileNav() {
                 float shimmer = sin(uv.x * 10.0 + uv.y * 5.0 + u_time * 2.0) * 0.5 + 0.5;
                 shimmer = pow(shimmer, 20.0); // Sharpen the shimmer line
                 
-                vec3 baseColor = vec3(0.08, 0.13, 0.20); // Dark theme deep charcoal steel navy
-                vec3 shimmerColor = vec3(0.25, 0.35, 0.48);
+                vec3 baseColor = mix(vec3(0.93, 0.96, 0.98), vec3(0.08, 0.13, 0.20), u_isDark);
+                vec3 shimmerColor = mix(vec3(0.75, 0.83, 0.92), vec3(0.25, 0.35, 0.48), u_isDark);
                 
                 vec3 finalColor = mix(baseColor, shimmerColor, shimmer * 0.6);
                 
@@ -653,6 +715,7 @@ function toggleMobileNav() {
     function animate(time) {
         requestAnimationFrame(animate);
         material.uniforms.u_time.value = time * 0.001;
+        material.uniforms.u_isDark.value = document.documentElement.classList.contains('dark') ? 1.0 : 0.0;
         renderer.render(scene, camera);
     }
     animate(0);

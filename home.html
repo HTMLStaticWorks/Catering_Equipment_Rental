@@ -430,11 +430,11 @@ function toggleMobileNav() {
 <main>
 
 <!-- Hero Section -->
-<section class="relative w-full min-h-[92vh] flex flex-col justify-center items-center text-center overflow-hidden" id="hero-home1">
+<section class="relative w-full min-h-[92vh] flex flex-col justify-center items-center text-center overflow-hidden bg-surface-bright dark:bg-[#111d27]" id="hero-home1">
     <!-- Background Image + Layered Gradients -->
     <div class="absolute inset-0 w-full h-full z-0">
-        <img alt="Professional industrial catering equipment rental hero banner." class="w-full h-full object-cover scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxVFDaxev_KnqwraxmK6owwvxzAzckg0dWp6izmycJ6U7wZ7b7k-LtGyaOSwFTWWzPZqUoZh3IQx2TlnWh4x5AV4Ph0N6qwV2Sq4mnKfkqaGG0k0afNOVpxYfCnlGTqKIvfE8vu5VylG7crZD1AsaiPY-feuaARfUQ307MMLD8YcMf2kLIYpQv34hN34BpxamPBn_YSzhDiDPXwdiTlzW7Bx8cS88s-0NLKiEZBWPeIbrXu6eL06ZV7Q" style="filter: brightness(0.4) saturate(1.1);"/>
-        <div class="absolute inset-0" style="background: linear-gradient(165deg, rgba(17,29,39,0.88) 0%, rgba(6,22,36,0.96) 100%);"></div>
+        <img alt="Professional industrial catering equipment rental hero banner." class="w-full h-full object-cover scale-105 opacity-30 dark:opacity-40" src="images/equipment_rental.png"/>
+        <div class="absolute inset-0 bg-gradient-to-b from-white/90 via-surface/85 to-surface dark:from-[#111d27]/90 dark:via-[#061624]/95 dark:to-[#111d27]/90"></div>
         <!-- Subtle grid overlay -->
         <div class="absolute inset-0 opacity-10" style="background-image: repeating-linear-gradient(0deg, transparent, transparent 59px, rgba(232,87,12,0.25) 60px), repeating-linear-gradient(90deg, transparent, transparent 59px, rgba(232,87,12,0.25) 60px);"></div>
     </div>
@@ -447,13 +447,13 @@ function toggleMobileNav() {
     <div class="relative z-10 max-w-5xl mx-auto px-6 flex flex-col items-center" style="padding-top: 100px; padding-bottom: 80px;">
 
         <!-- Eyebrow Badge -->
-        <div class="hero1-badge-animate flex items-center gap-2 mb-8 px-5 py-2 rounded-full border text-sm font-semibold uppercase tracking-widest" style="background: rgba(232,87,12,0.15); border-color: rgba(232,87,12,0.4); color: #FF7A30; opacity: 0; animation: heroFadeUp 0.7s ease forwards 0.1s;">
-            <span class="material-symbols-outlined" style="font-size: 16px;">verified</span>
+        <div class="hero1-badge-animate flex items-center gap-2 mb-8 px-5 py-2 rounded-full border text-sm font-semibold uppercase tracking-widest bg-secondary/10 dark:bg-secondary/20 border-secondary/30 dark:border-secondary/40 text-secondary dark:text-[#FF9551] shadow-sm" style="opacity: 0; animation: heroFadeUp 0.7s ease forwards 0.1s;">
+            <span class="material-symbols-outlined text-sm">verified</span>
             Premium Catering Equipment Rental
         </div>
 
         <!-- Main H1 -->
-        <h1 class="text-white font-bold leading-none tracking-tight mb-6 hero1-title-animate" style="font-size: clamp(2.6rem, 7vw, 6rem); opacity: 0; animation: heroFadeUp 0.8s ease forwards 0.3s;">
+        <h1 class="text-primary dark:text-white font-bold leading-none tracking-tight mb-6 hero1-title-animate" style="font-size: clamp(2.6rem, 7vw, 6rem); opacity: 0; animation: heroFadeUp 0.8s ease forwards 0.3s;">
             Commercial Kitchen<br>
             Equipment &mdash;
             <span class="hero1-gradient-text" style="background: linear-gradient(135deg, #E8570C 0%, #FF9551 50%, #E8570C 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; background-size: 200% auto; animation: heroTextShimmer 3s linear infinite;">Rented Right.</span>
@@ -465,49 +465,49 @@ function toggleMobileNav() {
         </div>
 
         <!-- Subheadline -->
-        <p class="text-lg md:text-xl max-w-2xl leading-relaxed mb-10 text-white/80 hero1-sub-animate" style="opacity: 0; animation: heroFadeUp 0.8s ease forwards 0.55s;">
+        <p class="text-lg md:text-xl max-w-2xl leading-relaxed mb-10 text-on-surface-variant dark:text-white/80 font-medium hero1-sub-animate" style="opacity: 0; animation: heroFadeUp 0.8s ease forwards 0.55s;">
             From intimate dinners to large-scale events &mdash; we have everything your catering team needs to execute flawlessly.
         </p>
 
         <!-- CTA Buttons -->
         <div class="flex flex-wrap justify-center gap-4 mb-16 hero1-cta-animate" style="opacity: 0; animation: heroFadeUp 0.8s ease forwards 0.7s;">
-            <button onclick="window.location.href='catalog.html'" style="background: linear-gradient(135deg, #E8570C, #FF7A30); color: #fff; padding: 15px 36px; border-radius: 12px; font-size: 0.95rem; font-weight: 700; letter-spacing: 0.04em; border: none; cursor: pointer; box-shadow: 0 4px 24px rgba(232,87,12,0.4); transition: all 0.3s ease; position: relative; overflow: hidden;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 32px rgba(232,87,12,0.5)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 24px rgba(232,87,12,0.4)';">
+            <button onclick="window.location.href='catalog.html'" class="bg-[#E8570C] hover:bg-[#d04b08] text-white py-3.5 px-8 rounded-xl text-sm font-bold uppercase tracking-wider transition-all duration-300 shadow-lg shadow-[#E8570C]/30 border-none cursor-pointer hover:-translate-y-0.5">
                 Browse Catalog
-                <span class="material-symbols-outlined" style="font-size: 18px; vertical-align: middle; margin-left: 6px;">arrow_forward</span>
+                <span class="material-symbols-outlined text-lg align-middle ml-1">arrow_forward</span>
             </button>
-            <button onclick="window.location.href='contact.html'" style="background: rgba(255,255,255,0.08); color: #ffffff; padding: 15px 36px; border-radius: 12px; font-size: 0.95rem; font-weight: 700; letter-spacing: 0.04em; border: 2px solid rgba(255,255,255,0.3); cursor: pointer; backdrop-filter: blur(8px); transition: all 0.3s ease;" onmouseover="this.style.background='rgba(255,255,255,0.18)'; this.style.borderColor='rgba(255,255,255,0.6)'; this.style.transform='translateY(-2px)';" onmouseout="this.style.background='rgba(255,255,255,0.08)'; this.style.borderColor='rgba(255,255,255,0.3)'; this.style.transform='translateY(0)';">
+            <button onclick="window.location.href='contact.html'" class="bg-white dark:bg-white/10 text-primary dark:text-white border-2 border-silver dark:border-white/30 hover:border-secondary font-bold py-3.5 px-8 rounded-xl text-sm uppercase tracking-wider transition-all duration-300 backdrop-blur-md shadow-sm hover:-translate-y-0.5 cursor-pointer">
                 Get a Free Quote
             </button>
         </div>
 
         <!-- Trust Stats Bar -->
-        <div class="hero1-stats-animate flex flex-wrap justify-center gap-8 pt-8 border-t border-white/15" style="opacity: 0; animation: heroFadeUp 0.8s ease forwards 0.85s; width: 100%;">
+        <div class="hero1-stats-animate flex flex-wrap justify-center gap-8 pt-8 border-t border-silver dark:border-white/15 w-full" style="opacity: 0; animation: heroFadeUp 0.8s ease forwards 0.85s;">
             <div class="flex flex-col items-center gap-1">
-                <span class="text-3xl font-bold" style="color: #FF7A30;">500+</span>
-                <span class="text-xs uppercase tracking-widest text-white/70">Events Served</span>
+                <span class="text-3xl font-bold text-[#E8570C]">500+</span>
+                <span class="text-xs uppercase tracking-widest text-on-surface-variant dark:text-white/70 font-semibold">Events Served</span>
             </div>
-            <div class="w-[1px] bg-white/20 h-10 self-center"></div>
+            <div class="w-[1px] bg-silver dark:bg-white/20 h-10 self-center hidden sm:block"></div>
             <div class="flex flex-col items-center gap-1">
-                <span class="text-3xl font-bold" style="color: #FF7A30;">2,000+</span>
-                <span class="text-xs uppercase tracking-widest text-white/70">Equipment Items</span>
+                <span class="text-3xl font-bold text-[#E8570C]">2,000+</span>
+                <span class="text-xs uppercase tracking-widest text-on-surface-variant dark:text-white/70 font-semibold">Equipment Items</span>
             </div>
-            <div class="w-[1px] bg-white/20 h-10 self-center"></div>
+            <div class="w-[1px] bg-silver dark:bg-white/20 h-10 self-center hidden sm:block"></div>
             <div class="flex flex-col items-center gap-1">
-                <span class="text-3xl font-bold" style="color: #FF7A30;">24h</span>
-                <span class="text-xs uppercase tracking-widest text-white/70">Delivery Ready</span>
+                <span class="text-3xl font-bold text-[#E8570C]">24h</span>
+                <span class="text-xs uppercase tracking-widest text-on-surface-variant dark:text-white/70 font-semibold">Delivery Ready</span>
             </div>
-            <div class="w-[1px] bg-white/20 h-10 self-center"></div>
+            <div class="w-[1px] bg-silver dark:bg-white/20 h-10 self-center hidden sm:block"></div>
             <div class="flex flex-col items-center gap-1">
-                <span class="text-3xl font-bold" style="color: #FF7A30;">4.9★</span>
-                <span class="text-xs uppercase tracking-widest text-white/70">Client Rating</span>
+                <span class="text-3xl font-bold text-[#E8570C]">4.9★</span>
+                <span class="text-xs uppercase tracking-widest text-on-surface-variant dark:text-white/70 font-semibold">Client Rating</span>
             </div>
         </div>
     </div>
 
     <!-- Scroll hint -->
     <div class="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-1" style="opacity: 0; animation: heroFadeUp 0.8s ease forwards 1.1s, heroScrollBounce 2s ease-in-out infinite 1.5s;">
-        <span class="text-xs uppercase tracking-widest text-white/50">Scroll</span>
-        <span class="material-symbols-outlined text-white/50" style="font-size: 20px;">keyboard_arrow_down</span>
+        <span class="text-xs uppercase tracking-widest text-on-surface-variant dark:text-white/50 font-medium">Scroll</span>
+        <span class="material-symbols-outlined text-on-surface-variant dark:text-white/50" style="font-size: 20px;">keyboard_arrow_down</span>
     </div>
 </section>
 

@@ -251,12 +251,12 @@
 <img src="images/logo.png" alt="ChefRent Pro Logo" class="h-8 w-8 object-cover rounded-full shadow-sm border border-outline-variant/50">
 <span>ChefRent Pro</span>
 </a>
-<div class="flex items-center gap-2">
-<button aria-label="Toggle dark mode" class="p-2 rounded-full hover:bg-surface-variant dark:hover:bg-surface-container-high transition-colors flex items-center justify-center text-primary dark:text-inverse-primary" onclick="toggleTheme()" type="button">
-<span class="material-symbols-outlined text-[24px]" id="theme-icon">dark_mode</span>
+<div class="flex items-center gap-3">
+<button aria-label="Toggle dark mode" class="w-10 h-10 rounded-full bg-surface/80 dark:bg-tertiary-container/80 text-on-surface dark:text-on-primary hover:bg-surface-variant dark:hover:bg-surface-tint/30 transition-colors shadow-sm backdrop-blur border border-outline-variant/30 flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-secondary-container" onclick="toggleTheme()" type="button" title="Toggle Theme">
+<span class="material-symbols-outlined text-[20px]" id="theme-icon">dark_mode</span>
 </button>
-<button aria-label="Toggle RTL" class="p-2 flex items-center justify-center w-10 h-10 text-on-surface-variant dark:text-on-tertiary-container hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-colors duration-200 rounded-full" id="rtl-toggle">
-<span class="material-symbols-outlined" data-icon="format_textdirection_r_to_l">format_textdirection_r_to_l</span>
+<button aria-label="Toggle RTL" class="h-10 px-4 rounded-full bg-surface/80 dark:bg-tertiary-container/80 text-on-surface dark:text-on-primary hover:bg-surface-variant dark:hover:bg-surface-tint/30 transition-colors shadow-sm backdrop-blur border border-outline-variant/30 flex items-center justify-center font-label-bold text-xs uppercase tracking-wider font-bold" id="rtl-toggle">
+RTL
 </button>
 </div>
 </header>
@@ -268,9 +268,13 @@
 <div class="absolute inset-0 bg-gradient-to-b from-background/80 to-background dark:from-primary/90 dark:to-primary"></div>
 </div>
 <div class="glass-card fade-in rounded w-full max-w-2xl p-8 md:p-12 relative z-10 shadow-sm flex flex-col gap-stack-lg dark:shadow-none">
-<div class="text-center flex flex-col gap-stack-sm">
-<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary dark:text-inverse-primary tracking-tight">Create Account</h1>
-<p class="font-body-md text-body-md text-on-surface-variant dark:text-on-primary-container">Join ChefRent Pro for professional equipment logistics.</p>
+<div class="text-center flex flex-col items-center justify-center gap-stack-sm">
+<a href="home.html" class="inline-flex items-center justify-center gap-3 font-headline-md text-headline-md text-primary dark:text-inverse-on-surface hover:opacity-80 transition-opacity mx-auto mb-1">
+<img src="images/logo.png" alt="ChefRent Pro Logo" class="h-9 w-9 object-cover rounded-full shadow-sm border border-outline-variant/50">
+<span>ChefRent Pro</span>
+</a>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary dark:text-inverse-primary tracking-tight text-center">Create Account</h1>
+<p class="font-body-md text-body-md text-on-surface-variant dark:text-on-primary-container text-center">Join ChefRent Pro for professional equipment logistics.</p>
 </div>
 <form class="flex flex-col gap-stack-md w-full">
 <div class="grid grid-cols-1 md:grid-cols-2 gap-stack-md">
@@ -337,7 +341,7 @@
 </div>
 
 <!-- Social Logins -->
-<div class="grid grid-cols-2 gap-3 sm:grid-cols-4">
+<div class="grid grid-cols-2 gap-3">
   <button type="button" class="social-btn flex items-center justify-center gap-2 py-2.5 px-3 border border-outline-variant/30 dark:border-outline-variant/20 rounded bg-surface hover:bg-surface-variant/50 dark:bg-tertiary-container dark:hover:bg-primary-container text-on-surface dark:text-inverse-on-surface font-body-sm transition-all duration-200 shadow-sm hover:shadow active:scale-[0.98]" data-provider="Google">
     <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24">
       <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
@@ -353,20 +357,6 @@
       <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.85c.66-.8 1.11-1.92.99-3.04-.96.04-2.13.64-2.82 1.44-.61.7-1.14 1.84-1 2.94 1.07.08 2.17-.54 2.83-1.34z"/>
     </svg>
     <span class="text-xs font-semibold">Apple</span>
-  </button>
-
-  <button type="button" class="social-btn flex items-center justify-center gap-2 py-2.5 px-3 border border-outline-variant/30 dark:border-outline-variant/20 rounded bg-surface hover:bg-surface-variant/50 dark:bg-tertiary-container dark:hover:bg-primary-container text-on-surface dark:text-inverse-on-surface font-body-sm transition-all duration-200 shadow-sm hover:shadow active:scale-[0.98]" data-provider="Facebook">
-    <svg class="w-4 h-4 fill-[#1877F2] shrink-0" viewBox="0 0 24 24">
-      <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-    </svg>
-    <span class="text-xs font-semibold">Facebook</span>
-  </button>
-
-  <button type="button" class="social-btn flex items-center justify-center gap-2 py-2.5 px-3 border border-outline-variant/30 dark:border-outline-variant/20 rounded bg-surface hover:bg-surface-variant/50 dark:bg-tertiary-container dark:hover:bg-primary-container text-on-surface dark:text-inverse-on-surface font-body-sm transition-all duration-200 shadow-sm hover:shadow active:scale-[0.98]" data-provider="GitHub">
-    <svg class="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24">
-      <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
-    </svg>
-    <span class="text-xs font-semibold">GitHub</span>
   </button>
 </div>
 

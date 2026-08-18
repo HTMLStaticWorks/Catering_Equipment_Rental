@@ -367,6 +367,7 @@ void main() {
 varying vec2 v_texCoord;
 uniform float u_time;
 uniform vec2 u_resolution;
+uniform float u_isDark;
 
 void main() {
     vec2 uv = v_texCoord;
@@ -379,8 +380,11 @@ void main() {
     float pulse = sin(u_time * 1.2) * 0.5 + 0.5;
     
     // Industrial colors from design system
-    vec3 baseColor = vec3(0.94, 0.96, 0.98); // Light Metallic Steel
-    vec3 gridColor = vec3(0.91, 0.34, 0.05) * 0.1; // Flame Orange accent
+    vec3 lightBase = vec3(0.94, 0.96, 0.98); // Light Metallic Steel
+    vec3 darkBase = vec3(0.06, 0.09, 0.14);  // Deep Metallic Navy
+    vec3 baseColor = mix(lightBase, darkBase, u_isDark);
+    
+    vec3 gridColor = mix(vec3(0.91, 0.34, 0.05) * 0.1, vec3(0.91, 0.34, 0.05) * 0.3, u_isDark); // Flame Orange accent
     
     vec3 finalColor = mix(baseColor, gridColor, line * pulse);
     
@@ -410,6 +414,7 @@ void main() {
   const uTime = gl.getUniformLocation(prog, 'u_time');
   const uRes = gl.getUniformLocation(prog, 'u_resolution');
   const uMouse = gl.getUniformLocation(prog, 'u_mouse');
+  const uIsDark = gl.getUniformLocation(prog, 'u_isDark');
 
   // u_mouse is in pixel coordinates matching u_resolution (ShaderToy convention).
   // Shaders that need normalized coords should use: u_mouse / u_resolution.
@@ -425,6 +430,7 @@ void main() {
     gl.viewport(0, 0, canvas.width, canvas.height);
     gl.uniform1f(uTime, time * 0.001);
     gl.uniform2f(uRes, canvas.width, canvas.height);
+    if (uIsDark) gl.uniform1f(uIsDark, document.documentElement.classList.contains('dark') ? 1.0 : 0.0);
     if (uMouse) gl.uniform2f(uMouse, mouse.x, mouse.y);
     gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
     requestAnimationFrame(render);
@@ -438,24 +444,24 @@ void main() {
 <div class="relative z-10 max-w-container-max-width mx-auto px-section-padding-horizontal">
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-stack-lg items-center">
 <div>
-<h2 class="font-headline-md text-headline-md text-primary dark:text-white uppercase tracking-tight mb-stack-sm">Built for High-Volume Reliability</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant dark:text-surface-variant mb-stack-lg">Every unit undergoes thermal stress testing and sanitization verification before dispatch.</p>
+<h2 class="font-headline-md text-headline-md text-primary dark:text-white uppercase tracking-tight mb-stack-sm font-bold">Built for High-Volume Reliability</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant dark:text-white/80 mb-stack-lg font-medium">Every unit undergoes thermal stress testing and sanitization verification before dispatch.</p>
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-stack-md">
-<div class="bg-surface-container-lowest/80 dark:bg-surface/10 backdrop-blur-sm border border-outline-variant/30 p-stack-md rounded-lg transform transition hover:scale-105">
-<span class="material-symbols-outlined text-secondary dark:text-secondary-container text-3xl mb-2">verified</span>
-<h3 class="font-headline-md text-headline-sm text-on-surface dark:text-white mb-1">99.8% Reliability</h3>
-<p class="font-body-sm text-on-surface-variant dark:text-primary-fixed-dim">Uptime rating across our core catalog.</p>
+<div class="bg-surface-container-lowest/90 dark:bg-primary-container/80 backdrop-blur-md border border-outline-variant/30 dark:border-outline/30 p-stack-md rounded-lg transform transition hover:scale-105 shadow-md">
+<span class="material-symbols-outlined text-[#E8570C] dark:text-secondary-container text-3xl mb-2">verified</span>
+<h3 class="font-headline-md text-headline-sm text-primary dark:text-white mb-1 font-bold">99.8% Reliability</h3>
+<p class="font-body-sm text-on-surface-variant dark:text-white/70 font-medium">Uptime rating across our core catalog.</p>
 </div>
-<div class="bg-surface-container-lowest/80 dark:bg-surface/10 backdrop-blur-sm border border-outline-variant/30 p-stack-md rounded-lg transform transition hover:scale-105">
-<span class="material-symbols-outlined text-secondary dark:text-secondary-container text-3xl mb-2">analytics</span>
-<h3 class="font-headline-md text-headline-sm text-on-surface dark:text-white mb-1">BTU Efficiency</h3>
-<p class="font-body-sm text-on-surface-variant dark:text-primary-fixed-dim">Real-time tracking for optimal fuel usage.</p>
+<div class="bg-surface-container-lowest/90 dark:bg-primary-container/80 backdrop-blur-md border border-outline-variant/30 dark:border-outline/30 p-stack-md rounded-lg transform transition hover:scale-105 shadow-md">
+<span class="material-symbols-outlined text-[#E8570C] dark:text-secondary-container text-3xl mb-2">analytics</span>
+<h3 class="font-headline-md text-headline-sm text-primary dark:text-white mb-1 font-bold">BTU Efficiency</h3>
+<p class="font-body-sm text-on-surface-variant dark:text-white/70 font-medium">Real-time tracking for optimal fuel usage.</p>
 </div>
 </div>
 </div>
 <div class="relative mt-stack-lg lg:mt-0">
 <div class="relative rounded-xl overflow-hidden shadow-2xl border-4 border-surface/10">
-<img alt="Premium industrial catering equipment" class="w-full h-auto object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAYIyQ-ph2mAozzUONYkOTvPABOtljyleDsrLM_wLYjpZ5JdLu_4ci1gAI4ilNB9K2ajhafAOxqF9PnrPEpubnPSfnVR6JHTL-bJR3Qfv-LQfYqPpjppph9OeO6R9_0YoHOUORctkM7rKgI0aoTE7lLg_aI0NDQY1sgFEAfNzO5w-vCeU11Q-CXxeR3LsalOTMvlXez5JiDhNHJNdlL2PP-IvLJuu2B6XGR690MIJgEZfPToeJ7ttAxA"/>
+<img alt="Premium industrial catering equipment" class="w-full h-auto object-cover" src="images/equipment_rental.png"/>
 <div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent"></div>
 </div>
 </div>
@@ -468,7 +474,7 @@ void main() {
 <div class="flex flex-col md:flex-row gap-stack-lg items-center">
 <div class="w-full md:w-1/2 relative">
 <div class="rounded-xl overflow-hidden shadow-lg border border-silver dark:border-outline-variant/20 relative">
-<img alt="OmniTemp Tracking System Interface" class="w-full h-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUxQO4NtgslY73P-uu9ZmTIrfHCWJ8h0mdNJrusmy0nZWXJvtrAginfOGwgfaQtinAgPbuhIF6vb_S4Lpc5Q-uifNNVfGujlsoFo9-32ZAf1FAlX7ROscBr_WKz45uflf9zWYqRsfXdIL5RiNgdpudE5ORS29lqtYFnLunQ7F77xZWKIC7VH3fyw_5ZmjeIG1EgFLwX_Q_vkDVZno9MwLuq2NO_834vrEV7IVNRYqdJpYJCNyZZABmMg"/>
+<img alt="OmniTemp Tracking System Interface" class="w-full h-auto" src="images/delivery_collection.png"/>
 <!-- Pulsing Beacon Overlay -->
 <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
 <div class="w-4 h-4 bg-secondary-container rounded-full pulse-beacon"></div>
